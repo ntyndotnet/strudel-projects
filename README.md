@@ -1,4 +1,4 @@
-# strudel-projects
+# about
 
 repo for strudel projects
 
