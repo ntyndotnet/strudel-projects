@@ -1,0 +1,46 @@
+// @title
+// @by ntyn <"https://ntyn.net">
+// @details date 2026.06.10
+
+setcpm(128/4)
+
+$: note(`<
+[db4 f4 ab4 c5]
+>`).sound("gm_piano:2").room(1)
+.gain("<0.8 1.0 0.8 0.6>").slow(2)
+
+$:note(`<
+[eb5 <f5 bb4>]
+>`).sound("gm_piano:2").room(1)
+.gain("<0.4 0.6>").fast(2)
+
+$:note(`<
+[g6 - - <ab6 bb6>] 
+>`).sound("gm_piano:2").room(1)
+
+$:note(`<
+[db1, db2]@3 <[ab1, ab2]@1 [f1, f2]@1>
+>`).sound("gm_piano:2").room(1)
+
+$:note(`<
+[g6 ab6 f6 eb6 db6] [bb6 c7 ab6 g6 f6 eb6]
+<[bb6@4] [c7@4] [-@4]>
+>`).sound("gm_violin:4").room(1)
+
+$:sound(`<
+[bd:0 - bd:0 -]
+[bd:0 - bd:0 -]
+>`).bank("yamaharm50").distort("0.5")
+
+$:sound(`<
+[- sd:2 - sd:2]
+[- [sd:2 - - sd:2] [ - sd:2 - ] sd:2]
+>`).bank("yamaharm50").distort("0.5")
+
+$:sound(`<
+[- hh - hh - hh oh hh]
+>`).bank("yamaharm50").gain("[- 0.5 - 0.5 - 1.0 1.0 0.5]")
+
+$:sound(`<
+[cr]
+>`).bank("yamaharm50").slow(2).gain("2")
