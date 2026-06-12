@@ -1,0 +1,84 @@
+// @title Winds of Winter
+// @by ntyn <https://ntyn.net>
+// @details date 2026.06.13
+
+setcpm(128/4)
+
+$: sound(`<
+     [- sd:2 - sd:2] [- sd:2 [- sd:2 - - ] [sd:2 [sd:2 ]]]
+     [- sd:2 - sd:2] [- sd:2 [- sd:2 - - ] [sd:2 [sd:2 * 2]]]
+     [- sd:2 - sd:2] [- sd:2 [- sd:2 - - ] [sd:2 [sd:2]]]
+     [- sd:2 - sd:2] [- sd:2 [- sd:2 - - ] [sd:2 [sd:2 * 4]]]
+>`).bank("yamaharm50").distort(0.5).gain(1.0).postgain(0.5)
+
+$: sound(`<
+    [bd:4 - bd:4 -] [bd:4 - [bd:4 - - bd:4] - ]
+    [bd:4 - bd:4 -] [bd:4 - [bd:4 - - bd:4] [- bd:4]]
+    [bd:4 - bd:4 -] [bd:4 - [bd:4 - - bd:4] - ]
+    [bd:4 - bd:4 -] [bd:4 - [bd:4 - - bd:4] [bd:4 -]]
+>`).bank("yamaharm50").distort(0.5).gain(1.0).postgain(0.5)
+
+$: sound(`<
+  [- oh:3 - oh:3] * 2
+>`).bank("yamaharm50").distort(0.0).gain("<0.8 1.0> * 4").pan("<0.2>").postgain(0.3)
+
+$:sound(`<
+  [cr:0 - ] / 2
+>`).bank("yamaharm50").distort(0.0).gain(1.0).pan(0.7).postgain(0.6)
+
+$:sound(`<
+ [ - rd:4 - rd:4] * 2
+>`).bank("yamaharm50").distort(0.0).pan(0.9).lpf("6000").postgain(0.4)
+
+// @by prokofiev 
+// piano concerto no.2
+// separated in 4 parts for clarity in visualization
+
+$:note(`<
+[a3@2 d4 a3 g3@2 a3 bb3] [c4@2 c4@2 d4@2 e4@]
+[a3@2 d4 a3 g3@2 a3 bb3] [c4@2 c4@2 d4@2 e4@]
+[g4@2 d4@2 g4@4] [-@8]
+[-@4 g4@4] [-@8]
+[a3@2 d4 a3 g3@2 a3 [bb3 d4]] [c4@2 c4@2 d4@2 e4@]
+[a3@2 d4 a3 g3@2 a3 [bb3 d4]] [c4@2 c4@2 d4@2 e4@]
+[a4@2 e4@2 a4@2 g4@2] [f4@2 e4@2 f4@2 g4@2]
+[a4@2 a4 e4 a4@2 g4@2] [f4@2 e4 d4 g4 f4 e4 d4]
+>`).sound("gm_piano:0").clip(2).room(0.1).gain(1.25).postgain(0.6).color("cyan")
+._pianoroll()
+._pitchwheel()
+
+$:note(`<
+[-@8] [-@8]
+[-@8] [-@8]
+[-@6 f4@2] [e4@2 d4@2 e4@2 f4@2]
+[g4@2 g4 d4 -@2 f4@2] [e4@2 d4 c4 d4@2 g3@2]
+[-@4 a4@4] [d5@4 -@4]
+[-@4 a4@4] [d5@4 -@4]
+[-@2 a5@4 a5@2] [a5@2 e5@2 a5@4]
+[-@2 g5@2 f5@2 e5@2] [f5@2 g5@2 a5@4]
+>`).sound("gm_piano:0").clip(2).room(0.1).gain(1.25).postgain(0.7).color("lightblue")
+._pianoroll()
+
+$:note(`<
+[d2@4] [g2@4]
+[d2@4] [g2@4]
+[e2@4] [a2@4]
+[e2@4] [a2@4]
+[d2@4] [g2@4]
+[d2@4] [g2@4]
+[e2@4] [b2@4]
+[e2@4] [b2@4]
+>`).sound("gm_piano:0").clip(2).room(0.1).gain(1).postgain(0.5).color("red")
+._pianoroll()
+
+$:note(`<
+[f3@2 a2@2 f3@2 a2@2] [f3@2 a2@2 f3@2 a2@2]
+[f3@2 a2@2 f3@2 a2@2] [f3@2 a2@2 f3@2 a2@2]
+[f3@2 bb2@2 f3@2 bb2@2] [f3@2 b2@2 f3@2 b2@2]
+[f3@2 bb2@2 f3@2 bb2@2] [f3@2 b2@2 f3@2 b2@2]
+[f3@2 a2@2 f3@2 a2@2] [f3@2 a2@2 f3@2 a2@2]
+[f3@2 a2@2 f3@2 a2@2] [f3@2 a2@2 f3@2 a2@2]
+[g3@2 c#3@2 g3@2 c#3@2] [f3@2 d3@2 f3@2 d3@2]
+[g3@2 c#3@2 g3@2 c#3@2] [f3@2 d3@2 e3@2 f3@2]
+>`).sound("gm_piano:0").clip(2).room(0.1).gain(0.8).postgain(0.4).color("lightgreen")
+._pianoroll()
