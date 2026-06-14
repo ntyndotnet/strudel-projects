@@ -1,0 +1,296 @@
+// @title Spiral of Erebos
+// original @by Falcom Sound Team jdk <"https://www.falcom.co.jp/">
+// arranged @by ntyn <"https://ntyn.net">
+
+/* @details
+
+    Probably one of the best tracks, and certainly also one of my favorites in all of Sen III/Cold Steel III.
+    
+    Especially the feeling of unending dread and despair as you head down deeper and deeper into the spiral of madness, that is the Gral of Erebos...
+    
+    Take a listen and enjoy.
+
+    Let me know if anything seems wrong!
+*/
+
+setcpm(112/4)
+
+// violin lead
+$:note(`<
+
+  [d#5@3 [e5 d#5] [c##5 d#5 b5]@4] [b5@3 [c#6 b5] a#5@4]
+  [b5@3 [a#5 b5] [g#5 a#5 b5]@4] [d#6@4 c#6@3 [b5 a#5]]
+  [g#5@4 d#6@3 [c#6 b5]] [a#5@3 [g#5 a#5] [f#6 g#6 f#6]@4]
+  [d#6@3 [c#6 d#6] [e6 d#6 c#6]@4] [[b5 a#5 b5]@4 c#6@3 [b5 a#5]]
+
+  [d#5@3 [e5 d#5] [c##5 d#5 b5]@4] [b5@3 [c#6 b5] a#5@4]
+  [b5@3 [a#5 b5] [g#5 a#5 b5]@4] [d#6@4 c#6@3 [b5 a#5]]
+  [g#5@4 f#6@3 [e6 d#6]] [c#6@3 [b5 c#6] [d#6 f#5 b5]@4]
+  [a#5@7 [b5 a#5]] [g#5@7 -@1]
+
+  [e5@3 [f5 e5] [d#5 e5 c6]@4] [c6@3 [d6 c6] b5@4]
+  [c6@3 [b5 c6] [a5 b5 c6]@4] [e6@4 d6@3 [c6 b5]]
+  [a5@4 e6@3 [d6 c6]] [b5@3 [a5 b5] [g6 a6 g6]@4]
+  [e6@3 [d6 e6] [f6 e6 d6]@4] [[c6 b5 c6]@4 d6@3 [c6 b5]]
+
+  [e5@3 [f5 e5] [d#5 e5 c6]@4] [c6@3 [d6 c6] b5@4]
+  [c6@3 [b5 c6] [a5 b5 c6]@4] [e6@4 d6@3 [c6 b5]]
+  [a5@4 g6@3 [f6 e6]] [d6@3 [c6 d6] [e6 g5 c6]@4]
+  [b5@7 [c6 b5]] [a5@7 -@1]
+
+  [d6@8] [c6@8]
+
+>`).sound("gm_violin").n(3).speed(1.0).clip(1.08).pan(0.5).room(0.2).gain(1.0).postgain(1.0)
+
+// doubling violin
+$:note(`<
+
+  [b4@3 [c#5 b4] [a#4 b4 d#5]@4] [f##5@3 [g#5 f##5] d#5@4]
+  [d#5@3 [f#5 g#5] [d#5 f#5 g#5]@4] [e#5@4 g#5@3 [g#5 f#5]]
+  [b4@4 g#5@3 [a#5 g#5]] [f#5@3 [d#5 f#5] [g#5 b5 d#6]@4]
+  [g#5@3 [a#5 b5] [c#6 b5 g#5]@4] [[c#5 f#5 g#5]@4 a#5@3 [g#5 f##5]]
+
+  [b4@3 [c#5 b4] [a#4 b4 d#5]@4] [f##5@3 [g#5 f##5] d#5@4]
+  [d#5@3 [f#5 g#5] [d#5 f#5 g#5]@4] [e#5@4 g#5@3 [g#5 f#5]]
+  [e5@4 b5@3 [c#6 b5]] [e5@3 [g#5 e5] [a#5 d#5 f#5]@4]
+  [d#5@7 [g#5 f#5]] [d#5@7 -@1]
+
+  [c5@3 [d5 c5] [b4 c5 e5]@4] [g#5@3 [a5 g#5] e5@4]
+  [e5@3 [g5 a5] [e5 g5 a5]@4] [f#5@4 a5@3 [a5 g5]]
+  [c5@4 a5@3 [b5 a5]] [g5@3 [e5 g5] [a5 c6 e6]@4]
+  [a5@3 [b5 c6] [d6 c6 a5]@4] [[d5 g5 a5]@4 b5@3 [a5 g#5]]
+
+  [c5@3 [d5 c5] [b4 c5 e5]@4] [g#5@3 [a5 g#5] e5@4]
+  [e5@3 [g5 a5] [e5 g5 a5]@4] [f#5@4 a5@3 [a5 g5]]
+  [f5@4 c6@3 [d6 c6]] [f5@3 [a5 f5] [b5 e5 g5]@4]
+  [e5@7 [a5 g5]] [e5@7 -@1]
+
+  [a5@8] [e5@8]
+
+>`).sound("gm_violin").n(3).speed(1.0).clip(1.08).pan(0.5).room(0.2).gain(0.4).postgain(1.0)
+
+// guitar left
+$:note(`<
+
+  [[g#2, d#3, g#3] [f##2, d#3, f##3]]@2
+  [[f#2, b2, f#3] [e#2, c#3, e#3]]@2
+  [[e2, b2, e3] [d#2, a#2, d#3]]@2
+  [[e2, b2, e3] [[f#2, c#3, f#3] [f##2, d#3, f##3]]]@2
+  [[g#2, d#3, g#3] [f##2, d#3, f##3]]@2
+  [[f#2, b3, f#3] [e#2, c#3, e#3]]@2
+  [[e2, b2, e3] [d#2, b2, d#3] [e2, b2, e3] [f#2, c#3, f#3]]@2
+  [[g#2, d#3, g#3] [g#2, d#3, g#3]]@2
+
+  [[a2, e3, a3] [g#2, e3, g#3]]@2
+  [[g2, c3, g3] [f#2, d3, f#3]]@2
+  [[f2, c3, f3] [e2, b2, e3]]@2
+  [[f2, c3, f3] [[g2, d3, g3] [g#2, e3, g#3]]]@2
+  [[a2, e3, a3] [g#2, e3, g#3]]@2
+  [[g2, c3, g3] [f#2, d3, f#3]]@2
+  [[f2, c3, f3] [e2, c3, e3] [f2, c3, f3] [g2, d3, g3]]@2
+  [[a2, e3, a3] [a2, e3, a3]]@2
+
+  [[a2, e3, a3] [a2, e3, a3]]@2
+
+>`).sound("gm_overdriven_guitar").n(6).speed(1.0).clip(1.05).distort(0.25).pan(0.1).room(0.2).gain(0.25).postgain(1.0)
+
+// guitar right
+$:note(`<
+
+  [[g#2 -@3, d#3 -@3, g#3 -@3]!8 [f##2 -@3, d#3 -@3, f##3 -@3]!8]@2
+  [[f#2 -@3, b2 -@3, f#3 -@3]!8 [e#2 -@3, c#3 -@3, e#3 -@3]!8]@2
+  [[e2 -@3, b2 -@3, e3 -@3]!8 [d#2 -@3, a#2 -@3, d#3 -@3]!8]@2
+  [[e2 -@3, b2 -@3, e3 -@3]!8 [[f#2 -@3, c#3 -@3, f#3 -@3]!4 [f##2 -@3, d#3 -@3, f##3 -@3]!4]@8]@2
+  [[g#2 -@3, d# -@33, g#3 -@3]!8 [f##2 -@3, d#3 -@3, f##3 -@3]!8]@2
+  [[f#2 -@3, b3 -@3, f#3 -@3]!8 [e#2 -@3, c#3 -@3, e#3 -@3]!8]@2
+  [[e2 -@3, b2 -@3, e3 -@3]!4 [d#2 -@3, b2 -@3, d#3 -@3]!4 [e2 -@3, b2 -@3, e3 -@3]!4 [f#2 -@3, c#3 -@3, f#3 -@3]!4]@2
+  [[g#2 -@3, d# -@33, g#3 -@3]!8 [g#2 -@3, d#3 -@3, g#3 -@3]!8]@2
+
+  [[a2 -@3, e3 -@3, a3 -@3]!8 [g#2 -@3, e3 -@3, g#3 -@3]!8]@2
+  [[g2 -@3, c3 -@3, g3 -@3]!8 [f#2 -@3, d3 -@3, f#3 -@3]!8]@2
+  [[f2 -@3, c3 -@3, f3 -@3]!8 [e2 -@3, b2 -@3, e3-@3]!8]@2
+  [[f2 -@3, c3 -@3, f3 -@3]!8 [[g2 -@3, d3 -@3, g3 -@3]!4 [g#2 -@3, e3 -@3, g#3 -@3]!4]@8]@2
+  [[a2 -@3, e3 -@3, a3 -@3]!8 [g#2 -@3, e3 -@3, g#3 -@3]!8]@2
+  [[g2 -@3, c3 -@3, g3 -@3]!8 [f#2 -@3, d3 -@3, f#3 -@3]!8]@2
+  [[f2 -@3, c3 -@3, f3 -@3]!4 [e2 -@3, c3 -@3, e3 -@3]!4 [f2 -@3, c3 -@3, f3 -@3]!4 [g2 -@3, d3 -@3, g3 -@3]!4]@2
+  [[a2 -@3, e3 -@3, a3 -@3]!8 [a2 -@3, e3 -@3, a3 -@3]!8]@2
+
+  [[a2 -@3, e3 -@3, a3 -@3]!8 [a2 -@3, e3 -@3, a3 -@3]!8]@2
+
+>`).sound("gm_overdriven_guitar").n(6).speed(1.0).clip(1.05).transient(0.1).distort(0.25).pan(0.9).room(0.2).gain(0.4).postgain(1.0)
+
+// bass
+$:note(`<
+
+  [[g#1 -]!4 - [g#1 -]!3 [f##1 - ]!4 - [f##1 -]!3]@2
+  [[f#1 -]!4 - [f#1 -]!3 [e#1 - ]!4 - [e#1 -]!3]@2
+  [[e1 -]!4 - [e1 -]!3 [d#1 - ]!4 - [d#1 -]!3]@2
+  [[e1 -]!4 - [e1 -]!3 [f#1 -]!4 - [f##1 - ]!3]@2
+  [[g#1 -]!8 [f##1 - ]!8]@2
+  [[f#1 -]!8 [e#1 - ]!8]@2
+  [[e1 -]!4 [d#1 - ]!4 [e1 -]!4 [f#1 - ]!4]@2
+  [[g#1 -]!4 - [g#1 -]!3 [g#1 -]!8]@2
+
+  [[a1 -]!4 - [a1 -]!3 [g#1 - ]!4 - [g#1 -]!3]@2
+  [[g1 -]!4 - [g1 -]!3 [f#1 - ]!4 - [f#1 -]!3]@2
+  [[f1 -]!4 - [f1 -]!3 [e1 - ]!4 - [e1 -]!3]@2
+  [[f1 -]!4 - [f1 -]!3 [g1 -]!4 - [g#1 -]!3]@2
+  [[a1 -]!8 [g#1 - ]!8]@2
+  [[g1 -]!8 [f#1 - ]!8]@2
+  [[f1 -]!4 [e1 - ]!4 [f1 -]!4 [g1 - ]!4]@2
+  [[a1 -]!4 - [a1 -]!3 [a1 -]!8]@2
+
+  [[a1 -]!8 [a1 -]!4 - [a1 -]!3]@2
+
+>`).sound("gm_electric_bass_pick").n(5).speed(1.0).clip(1.0).distort(0.25).pan(0.5).room(0.2).gain(0.65).postgain(1.0)
+
+// choir pad
+$:note(`<
+
+  [[g#3, d#4, b4, d#5] [f##3, d#4, a#4, d#5]]@2
+  [[f#3, d#4, b4, d#5] [e#3, c#4, g#4, c#5]]@2
+  [[e3, b3, g#4, e5] [d#3, d#4, a#3, f#5]]@2
+  [[e3, b3, g#4, e5] [[f#3, c#4, a#4, c#5] [f##3, d#4, f##4, a#4]]]@2
+  [[g#3, d#4, b4, d#5] [f##3, d#4, a#4, d#5]]@2
+  [[f#3, d#4, b4, d#5] [e#3, c#4, g#4, c#5]]@2
+  [[e3, b3, g#4, e5] [d#3, d#4, b4, d#5] [e3, b3, g#4, e5] [f#3, c#4, a#4, f#5]]@2
+  [[g#3, d#4, b4, g#5] [g#3, d#4, b4, d#5]]@2
+
+  [[a3, e4, c5, e5] [g#3, e4, b4, e5]]@2
+  [[g3, e4, c5, e5] [f#3, d4, a4, d5]]@2
+  [[f3, c4, a4, f5] [e3, e4, b4, g5]]@2
+  [[f3, c4, a4, f5] [[g3, d4, b4, d5] [g#3, e4, g#4, b4]]]@2
+  [[a3, e4, c5, e5] [g#3, e4, b4, e5]]@2
+  [[g3, e4, c5, e5] [f#3, d4, a4, d5]]@2
+  [[f3, c4, a4, f5] [e3, e4, c5, e5] [f3, c4, a4, f5] [g3, d4, b4, g5]]@2
+  [[a3, e4, c5, a5] [a3, e4, c5, e5]]@2
+
+  [[a3, e4, a4, d5] [a3, e4, a4, c5]]@2
+
+>`).sound("gm_choir_aahs").n(6).speed(1.0).clip(1.05).pan("<0.45 0.55>").room(0.2).gain(0.4).postgain(1.0)
+
+// piano
+$:note(`<
+
+  [[g#2, g#3, d#4, g#4, b4] [f##2, f##3, d#4, f##4, a#4]]@2
+  [[f#2, f#3, d#4, f#4, b4] [e#2, e#3, e#4, g#4, c#5]]@2
+  [[e2, e3, e4, g#4, b4] [d#2, d#3, d#4, f#4, a#4]]@2
+  [[e2, e3, e4, g#4, b4] [[f#2, f#3, c#4, f#4, a#4] [f##2, f##3, f##4, a#4, d#5]]]@2
+  [[g#2, g#3, d#4, g#4, b4] [f##2, f##3, d#4, f##4, a#4]]@2
+  [[f#2, f#3, d#4, f#4, b4] [e#2, e#3, e#4, g#4, c#5]]@2
+  [[e2, e3, e4, g#4, b4] [d#2, d#3, d#4, f#4, b4] [e2, e3, e4, g#4, b4] [f#2, f#3, f#4, a#4, c#5]]@2
+  [[g#2, g#3, d#4, g#4, a#4] [g#2, g#3, b3, d#4, g#4]]@2
+
+  [[a2, a3, a4, c5, e5] [g#2, g#3, g#4, b4, e5]]@2
+  [[g2, g3, g4, c5, e5] [f#2, f#3, f#4, a4, d5]]@2
+  [[f2, f3, f4, a4, c5] [e2, e3, g4, b4, e5]]@2
+  [[f2, f3, a4, c5, f5] [[g2, g3, g4, b4, d5] [g#2, g#3, e4, b4, e5]]]@2
+  [[a2, a3, a4, c5, e5] [g#2, g#3, g#4, b4, e5]]@2
+  [[g2, g3, g4, c5, e5] [f#2, f#3, f#4, a4, d5]]@2
+  [[f2, f3, a4, c5, f5] [e2, e3, g4, c5, g5] [f2, f3, a4, c5, f5] [g2, g3, b4, d5, g5]]@2
+  [[a2, a3, c5, e5, b5] [a2, a3, c5, e5, a5]]@2
+
+  [[a2, a3, e4, a4, d5] [a2, a3, e4, a4, c5]]@2
+
+>`).sound("gm_piano").n(4).speed(1.0).clip(1.05).adsr("0.0:4.0:0.0:0.8").pan(0.72).room(0.2).hpf(100.0).gain("<0.24 0.25>").postgain(1.0)
+
+// e piano
+$:note(`<
+
+  [[g#3, d#4, g#4, b4] [f##3, d#4, f##4, a#4]]@2
+  [[f#3, d#4, f#4, b4] [e#3, e#4, g#4, c#5]]@2
+  [[e3, e4, g#4, b4] [d#3, d#4, f#4, a#4]]@2
+  [[e3, e4, g#4, b4] [[f#3, c#4, f#4, a#4] [f##3, f##4, a#4, d#5]]]@2
+  [[g#3, d#4, g#4, b4] [f##3, d#4, f##4, a#4]]@2
+  [[f#3, d#4, f#4, b4] [e#3, e#4, g#4, c#5]]@2
+  [[e3, e4, g#4, b4] [d#3, d#4, f#4, b4] [e3, e4, g#4, b4] [f#3, f#4, a#4, c#5]]@2
+  [[g#3, d#4, g#4, a#4] [g#3, b3, d#4, g#4]]@2
+
+  [[a3, a4, c5, e5] [ g#3, g#4, b4, e5]]@2
+  [[g3, g4, c5, e5] [ f#3, f#4, a4, d5]]@2
+  [[f3, f4, a4, c5] [e3, g4, b4, e5]]@2
+  [[f3, a4, c5, f5] [[g3, g4, b4, d5] [g#3, e4, b4, e5]]]@2
+  [[a3, a4, c5, e5] [ g#3, g#4, b4, e5]]@2
+  [[g3, g4, c5, e5] [ f#3, f#4, a4, d5]]@2
+  [[f3, a4, c5, f5] [e3, g4, c5, g5] [f3, a4, c5, f5] [g3, b4, d5, g5]]@2
+  [[a3, c5, e5, b5] [a3, c5, e5, a5]]@2
+
+  [[a3, e4, a4, d5] [a3, e4, a4, c5]]@2
+
+>`).sound("gm_epiano1").n(0).speed(1.0).clip(1.05).adsr("0.0:4.0:0.0:0.8").phaser(0.6).phaserdepth(0.6).pan(0.28).room(0.2).hpf(100.0).gain("<0.32 0.33>").postgain(1.0)
+
+// kick
+$:sound(`<
+
+  [bd [-@3 bd] [-@2 bd -] -] * 15@15 [[bd -@2 bd -@2 bd -] [bd -@2 bd -@2 - [bd bd]]]
+  [bd [-@3 bd] [-@2 bd -] -] * 15@15 [[bd -@2 bd -@2 bd -] [bd -@2 bd -@2 - [bd bd]]]
+
+  [[bd -@2 bd -@2 bd -] [bd -@2 bd -@2 bd -]] [[bd -@2 bd -@2 bd -] [bd -@2 bd -@2 bd [bd bd]]]
+
+>`).bank("yamaharm50").n(17).speed(1.0).clip(1.0).adsr("0.0:0.5:0.0:0.0").transient(0.1).distort(2.0).compressor("-10.0:4.0:10:1:1").pan(0.5).room(0.2).gain(0.15).postgain(1.0)
+
+// snare
+$:sound(`<
+
+  [[- sd - sd] [- sd - [sd sd - sd]] [- sd - sd] [- sd - [sd sd - sd]]] * 3@12
+  [- sd - sd] [- sd - [sd sd - sd]] [- sd - sd] [[-@7 sd] [-@6 sd -]]
+
+  [[- sd - sd] [- sd - [sd sd - sd]] [- sd - sd] [- sd - [sd sd - sd]]] * 3@12
+  [- sd - sd] [- sd - [sd sd - sd]] [- sd - sd] [[-@7 sd] [-@6 sd sd]]
+
+  [- sd - sd] [[-@6 sd sd] [-@6 sd [sd sd]]]
+
+>`).bank("yamaharm50").n(85).speed(0.7).clip(1.0).adsr("0.0:0.4:0.0:0.0").transient(0.1).distort(1.0).compressor("-10.0:4.0:10:1:1").pan(0.5).room(0.2).gain(0.15).postgain(1.0)
+
+// toms
+$:sound(`<
+
+  [-]@15
+  [[- ht mt - mt lt -@2 ] [- [ht mt] lt - mt lt -@2]]
+
+  [-]@15
+  [[- ht mt - mt lt -@2 ] [- [ht mt] lt - mt lt -@2]]
+
+  [-] [[- ht mt - mt lt -@2] [- ht mt - mt lt -@2]]
+
+>`).bank("yamaharm50").n(1).speed(1.0).clip(2.0).transient(0.15).distort(1.0).compressor("-10.0:4.0:10:1:1").pan(0.5).room(0.2).gain(0.1).postgain(1.0)
+
+// crash
+$:sound(`<
+
+  [cr -@14 [- cr]] * 4@32
+
+  [cr -] [- cr]
+  
+>`).bank("yamaharm50").n(5).speed("<0.96 1.04>").clip(1.0).distort(0.0).pan("<0.35 0.65>").delay("0.2:0.4:0.4").room(0.4).gain(0.4).postgain(1.0)
+
+// ride
+$:sound(`<
+
+  [[- rd] [- rd]] * 64@32
+
+  [- rd - [rd rd]] [- rd rd [- rd]]
+  
+>`).bank("yamaharm50").n(3).speed(1.2).clip(1.0).transient(0.1).distort(0.0).pan(0.8).delay("0.1:0.1:0.2").room(0.4).gain("<0.4 0.3> * 4").postgain(1.0)
+
+// close hats
+$:sound(`<
+
+  [[[hh -]!2] [[hh -]!2] [[hh -]!2] [[hh -]!2]]!15 [-]@1
+  
+  [-]@16
+
+  [-]@2
+
+>`).bank("yamaharm50").n(7).speed("<1.04 0.96> * 8").clip(1.0).transient(0.0).distort(0.0).pan(0.2).delay("0.1:0.1:0.2").room(0.4).gain("<0.2 0.14> * 8").postgain(1.0)
+
+// open hats
+$:sound(`<
+
+  [-]@16
+  
+  [oh!4]!15 [oh -@3]
+
+  [oh!4] [oh -@3]
+  
+>`).bank("yamaharm50").n(16).speed("<1.0 0.994>").clip(1.2).transient(0.0).distort(0.0).pan(0.2).delay("0.1:0.1:0.2").room(0.4).gain("<0.16 0.14> * 4").postgain(1.0)
