@@ -1,296 +1,857 @@
 // @title Spiral of Erebos
-// original @by Falcom Sound Team jdk <"https://www.falcom.co.jp/">
-// arranged @by ntyn <"https://ntyn.net">
+// original @by Falcom Sound Team jdk <https://www.falcom.co.jp/>
+// arranged @by ntyn <https://ntyn.net>
 
 /* @details
+from 英雄伝説 閃の軌跡Ⅲ
 
-    Probably one of the best tracks, and certainly also one of my favorites in all of Sen III/Cold Steel III.
-    
-    Especially the feeling of unending dread and despair as you head down deeper and deeper into the spiral of madness, that is the Gral of Erebos...
-    
-    Take a listen and enjoy.
+Probably one of the best tracks, and certainly one of my favorites in all of Sen no Kiseki III/Trails of Cold Steel III.
 
-    Let me know if anything seems wrong!
+If I could only choose one track to represent Cold Steel III or even the whole Cold Steel/Erebonia Arc, this track would definitely be it.
+
+Especially the feeling of unending dread and despair as you head down deeper and deeper into the spiral of madness that is the Gral of Erebos, to try and save Altina...
+
+(I especially like the section where e minor modulates into g# minor, I've always found transitions where the roots are a third apart to sound really cool when used appropriately.)
+
+Take a listen and enjoy, and let me know if anything seems wrong!
+
+Also, below is the relevant entry found in the Black Records detailing the Great Twilight, for no particular reason other than it felt epic reading through it in game.
+*/
+
+/*
+EN:
+Twilight Begins - Year 1206
+
+Between flame and earth...
+
+The wavering darkness begins to spin the tale of the end.
+
+First, the conflict of the great gods of the second pillar.
+
+Second, the fusion of earth and flame, and the completion of the seven vessels.
+
+Third, the beginning of the thousand-year city and the acceptance of the Gral.
+
+Fourth, the disappearance of the Holy Beast and the catastrophe of the whispering dragons.
+
+Fifth, the recapture of the capital and the vermillion curse.
+
+Sixth, the lions' war and the sacrifice of the holy maiden.
+
+Seventh, the appearance of the giant pillar in the north and the unwanted child.
+
+Eighth, the sacrifice of the village and the hundred days campaign.
+
+Ninth, the great blue tree to the east and the appearance of the cursed castle.
+
+Thus, the thousand year old wish was fulfilled.
+
+When the sacrifice is made and the ancient blood flows, the path to the Gral of Erebos shall open.
+
+When the tainted Holy Beast is pierced by the blade of world's end and its blood fills the Gral, the Great Twilight shall fall upon the land.
+
+JP:
+『黄昏の始まり』　Ｓ1206
+
+焔と大地の狭間―—
+揺蕩う闇にて終末の物語は始まらん。
+
+一つは、二柱の巨神たちの相克。
+
+二つは、焔と大地の融合と、七の器の完成。
+
+三つは、千年の都の開闢と星杯の受け容れ。
+
+四つは、聖獣の消失と昏き竜の災厄。
+
+五つは、帝都奪還と緋が受けし呪い。
+
+六つは、獅子たちの戦乱と聖女の犠牲。
+
+七つは、北に顕れたる巨柱と忌み子。
+
+八つは、贄となりし邑と百日の外征。
+
+九つは、東の碧き大樹と煌魔の城の顕現。
+
+斯くして千年に及ぶ悲願は成就せり。
+
+贄により古の血が流されし刻、
+《黒キ星杯》への道が開かれん。
+
+穢れし聖獣が終末の剣に貫かれ、
+その血が星杯を充たす刻・・・
+
+ー《巨イナル黄昏》は始まらん。 
 */
 
 setcpm(112/4)
 
-// violin lead
+// pad
 $:note(`<
 
-  [d#5@3 [e5 d#5] [c##5 d#5 b5]@4] [b5@3 [c#6 b5] a#5@4]
-  [b5@3 [a#5 b5] [g#5 a#5 b5]@4] [d#6@4 c#6@3 [b5 a#5]]
-  [g#5@4 d#6@3 [c#6 b5]] [a#5@3 [g#5 a#5] [f#6 g#6 f#6]@4]
-  [d#6@3 [c#6 d#6] [e6 d#6 c#6]@4] [[b5 a#5 b5]@4 c#6@3 [b5 a#5]]
+[g2, g3, d4, g4, bb4]@2
+[eb2, eb3, g4, bb4, d5] [f2, f3, f4, a4, c5]
+[g2, g3, d4, g4, bb4]@2
+[eb2, eb3, g4, bb4, d5] [f2, f3, f4, a4, c5]
 
-  [d#5@3 [e5 d#5] [c##5 d#5 b5]@4] [b5@3 [c#6 b5] a#5@4]
-  [b5@3 [a#5 b5] [g#5 a#5 b5]@4] [d#6@4 c#6@3 [b5 a#5]]
-  [g#5@4 f#6@3 [e6 d#6]] [c#6@3 [b5 c#6] [d#6 f#5 b5]@4]
-  [a#5@7 [b5 a#5]] [g#5@7 -@1]
+[g2, g3, d4, g4, bb4]@2
+[eb2, eb3, g4, bb4, d5] [f2, f3, f4, a4, c5]
+[c2, c3, g4, bb4, d5] [d2, d3, f4, a4, c5]
+[[eb2, eb3, d4, g4, bb4] [f2, f3, c4, f4, a4]] [g2, g3, d4, f4, bb4]
 
-  [e5@3 [f5 e5] [d#5 e5 c6]@4] [c6@3 [d6 c6] b5@4]
-  [c6@3 [b5 c6] [a5 b5 c6]@4] [e6@4 d6@3 [c6 b5]]
-  [a5@4 e6@3 [d6 c6]] [b5@3 [a5 b5] [g6 a6 g6]@4]
-  [e6@3 [d6 e6] [f6 e6 d6]@4] [[c6 b5 c6]@4 d6@3 [c6 b5]]
+[-]@8
 
-  [e5@3 [f5 e5] [d#5 e5 c6]@4] [c6@3 [d6 c6] b5@4]
-  [c6@3 [b5 c6] [a5 b5 c6]@4] [e6@4 d6@3 [c6 b5]]
-  [a5@4 g6@3 [f6 e6]] [d6@3 [c6 d6] [e6 g5 c6]@4]
-  [b5@7 [c6 b5]] [a5@7 -@1]
+[g2, bb3, d5] [eb2, bb3, g4, d5]
+[c2, bb3, g4, eb5] [d2, a3, c4, eb4, f#4, d5]
+[g2, bb3, d5] [eb2, bb3, g4, d5]
+[c2, bb3, g4, eb5] [d2, a3, c4, eb4, f#4, d5]
+[g2, bb3, d5] [f2, bb3, g4, d5]
+[eb2, bb3, g4, c5, d5] [d2, a3, f#4, c5, d5]
+[g2, bb3, d5] [f2, bb3, g4, d5]
+[eb2, bb3, g4, c5, d5] [d2, a3, f#4, c5, d5]
 
-  [d6@8] [c6@8]
+[g2, bb3, d5] [f2, a3, c5] [eb2, g3, c5] [d2, a3, f#4, d5]
+[g2, bb3, d5] [f2, a3, c5] [eb2, g3, c5] [[f2, a3, c5] [d2, a3, f#4, d5]]
+[e2, g3, e4, b4] [c#2, a3, e4, a4] [d2, d4, g4, b4] [d#2, b3, f#4, b4]
+[e2, e4, g4, b4] [c#2, a3, e4, a4] [[d2, b3, d4, g4] [d2, b3, d4, f#4]] [[b1, b3, e4, f#4] [b1, b3, d#4, f#4]]
+[g2, bb3, d5] [f2, a3, c5] [eb2, g3, c5] [d2, a3, f#4, d5]
+[g2, bb3, d5] [f2, a3, c5] [eb2, g3, c5] [[f2, a3, c5] [d2, a3, f#4, d5]]
+[e2, g3, e4, b4] [c#2, a3, e4, a4] [d2, d4, g4, b4] [d#2, b3, f#4, b4]
+[d2, d4, g4, b4] [c#2, a3, e4, a4] [c2, e4, g4, b4] [b1, f#4, b4, e5] [b1, f#4, b4, d#5]
 
->`).sound("gm_violin").n(3).speed(1.0).clip(1.08).pan(0.5).room(0.2).gain(1.0).postgain(1.0)
+[g#2, g#4, b4, d#5] [[f##2, f##4, b4, e5] [f##2, f##4, a#4, e5]] [f#2, g#4, b4, d#5] [e#2, e#4, g#4, c#5]
+[c#2, g#4, b4, e5] [d#2, f#4, a#4, c#5] [e2, g#4, b4, d#5] [[f#2, a#4, c#5, f#5] [f##2, f##4, a#4, d#5]]
+[g#2, g#4, b4, d#5] [[f##2, f##4, b4, e5] [f##2, f##4, a#4, e5]] [f#2, g#4, b4, d#5] [e#2, e#4, g#4, c#5]
+[[c#2, g#4, b4, e5] [d#2, f#4, a#4, c#5]] [[e2, g#4, b4, d#5] [f#2, a#4, c#5, f#5]] [g#2, c#5, d#5, a#5] [g#2, b4, d#5, g#5]
+[a2, a4, c5, e5] [[g#2, g#4, c5, f5] [g#2, g#4, b4, f5]] [g2, a4, c5, e5] [f#2, f#4, a4, d5]
+[d2, a4, c5, f5] [e2, g4, b4, d5] [f2, a4, c5, e5] [[g2, b4, d5, g5] [g#2, g#4, b4, e5]]
+[a2, a4, c5, e5] [[g#2, g#4, c5, f5] [g#2, g#4, b4, f5]] [g2, a4, c5, e5] [f#2, f#4, a4, d5]
+[[d2, a4, c5, f5] [e2, g4, b4, d5]] [[f2, a4, c5, e5] [g2, b4, d5, g5]] [a2, d5, e5, b5] [a2, c5, e5, a5]
+[a2, e4, a4, d5] [a2, e4, a4, c5]
 
-// doubling violin
-$:note(`<
-
-  [b4@3 [c#5 b4] [a#4 b4 d#5]@4] [f##5@3 [g#5 f##5] d#5@4]
-  [d#5@3 [f#5 g#5] [d#5 f#5 g#5]@4] [e#5@4 g#5@3 [g#5 f#5]]
-  [b4@4 g#5@3 [a#5 g#5]] [f#5@3 [d#5 f#5] [g#5 b5 d#6]@4]
-  [g#5@3 [a#5 b5] [c#6 b5 g#5]@4] [[c#5 f#5 g#5]@4 a#5@3 [g#5 f##5]]
-
-  [b4@3 [c#5 b4] [a#4 b4 d#5]@4] [f##5@3 [g#5 f##5] d#5@4]
-  [d#5@3 [f#5 g#5] [d#5 f#5 g#5]@4] [e#5@4 g#5@3 [g#5 f#5]]
-  [e5@4 b5@3 [c#6 b5]] [e5@3 [g#5 e5] [a#5 d#5 f#5]@4]
-  [d#5@7 [g#5 f#5]] [d#5@7 -@1]
-
-  [c5@3 [d5 c5] [b4 c5 e5]@4] [g#5@3 [a5 g#5] e5@4]
-  [e5@3 [g5 a5] [e5 g5 a5]@4] [f#5@4 a5@3 [a5 g5]]
-  [c5@4 a5@3 [b5 a5]] [g5@3 [e5 g5] [a5 c6 e6]@4]
-  [a5@3 [b5 c6] [d6 c6 a5]@4] [[d5 g5 a5]@4 b5@3 [a5 g#5]]
-
-  [c5@3 [d5 c5] [b4 c5 e5]@4] [g#5@3 [a5 g#5] e5@4]
-  [e5@3 [g5 a5] [e5 g5 a5]@4] [f#5@4 a5@3 [a5 g5]]
-  [f5@4 c6@3 [d6 c6]] [f5@3 [a5 f5] [b5 e5 g5]@4]
-  [e5@7 [a5 g5]] [e5@7 -@1]
-
-  [a5@8] [e5@8]
-
->`).sound("gm_violin").n(3).speed(1.0).clip(1.08).pan(0.5).room(0.2).gain(0.4).postgain(1.0)
-
-// guitar left
-$:note(`<
-
-  [[g#2, d#3, g#3] [f##2, d#3, f##3]]@2
-  [[f#2, b2, f#3] [e#2, c#3, e#3]]@2
-  [[e2, b2, e3] [d#2, a#2, d#3]]@2
-  [[e2, b2, e3] [[f#2, c#3, f#3] [f##2, d#3, f##3]]]@2
-  [[g#2, d#3, g#3] [f##2, d#3, f##3]]@2
-  [[f#2, b3, f#3] [e#2, c#3, e#3]]@2
-  [[e2, b2, e3] [d#2, b2, d#3] [e2, b2, e3] [f#2, c#3, f#3]]@2
-  [[g#2, d#3, g#3] [g#2, d#3, g#3]]@2
-
-  [[a2, e3, a3] [g#2, e3, g#3]]@2
-  [[g2, c3, g3] [f#2, d3, f#3]]@2
-  [[f2, c3, f3] [e2, b2, e3]]@2
-  [[f2, c3, f3] [[g2, d3, g3] [g#2, e3, g#3]]]@2
-  [[a2, e3, a3] [g#2, e3, g#3]]@2
-  [[g2, c3, g3] [f#2, d3, f#3]]@2
-  [[f2, c3, f3] [e2, c3, e3] [f2, c3, f3] [g2, d3, g3]]@2
-  [[a2, e3, a3] [a2, e3, a3]]@2
-
-  [[a2, e3, a3] [a2, e3, a3]]@2
-
->`).sound("gm_overdriven_guitar").n(6).speed(1.0).clip(1.05).distort(0.25).pan(0.1).room(0.2).gain(0.25).postgain(1.0)
-
-// guitar right
-$:note(`<
-
-  [[g#2 -@3, d#3 -@3, g#3 -@3]!8 [f##2 -@3, d#3 -@3, f##3 -@3]!8]@2
-  [[f#2 -@3, b2 -@3, f#3 -@3]!8 [e#2 -@3, c#3 -@3, e#3 -@3]!8]@2
-  [[e2 -@3, b2 -@3, e3 -@3]!8 [d#2 -@3, a#2 -@3, d#3 -@3]!8]@2
-  [[e2 -@3, b2 -@3, e3 -@3]!8 [[f#2 -@3, c#3 -@3, f#3 -@3]!4 [f##2 -@3, d#3 -@3, f##3 -@3]!4]@8]@2
-  [[g#2 -@3, d# -@3, g#3 -@3]!8 [f##2 -@3, d#3 -@3, f##3 -@3]!8]@2
-  [[f#2 -@3, b3 -@3, f#3 -@3]!8 [e#2 -@3, c#3 -@3, e#3 -@3]!8]@2
-  [[e2 -@3, b2 -@3, e3 -@3]!4 [d#2 -@3, b2 -@3, d#3 -@3]!4 [e2 -@3, b2 -@3, e3 -@3]!4 [f#2 -@3, c#3 -@3, f#3 -@3]!4]@2
-  [[g#2 -@3, d# -@3, g#3 -@3]!8 [g#2 -@3, d#3 -@3, g#3 -@3]!8]@2
-
-  [[a2 -@3, e3 -@3, a3 -@3]!8 [g#2 -@3, e3 -@3, g#3 -@3]!8]@2
-  [[g2 -@3, c3 -@3, g3 -@3]!8 [f#2 -@3, d3 -@3, f#3 -@3]!8]@2
-  [[f2 -@3, c3 -@3, f3 -@3]!8 [e2 -@3, b2 -@3, e3-@3]!8]@2
-  [[f2 -@3, c3 -@3, f3 -@3]!8 [[g2 -@3, d3 -@3, g3 -@3]!4 [g#2 -@3, e3 -@3, g#3 -@3]!4]@8]@2
-  [[a2 -@3, e3 -@3, a3 -@3]!8 [g#2 -@3, e3 -@3, g#3 -@3]!8]@2
-  [[g2 -@3, c3 -@3, g3 -@3]!8 [f#2 -@3, d3 -@3, f#3 -@3]!8]@2
-  [[f2 -@3, c3 -@3, f3 -@3]!4 [e2 -@3, c3 -@3, e3 -@3]!4 [f2 -@3, c3 -@3, f3 -@3]!4 [g2 -@3, d3 -@3, g3 -@3]!4]@2
-  [[a2 -@3, e3 -@3, a3 -@3]!8 [a2 -@3, e3 -@3, a3 -@3]!8]@2
-
-  [[a2 -@3, e3 -@3, a3 -@3]!8 [a2 -@3, e3 -@3, a3 -@3]!8]@2
-
->`).sound("gm_overdriven_guitar").n(6).speed(1.0).clip(1.05).transient(0.1).distort(0.25).pan(0.9).room(0.2).gain(0.4).postgain(1.0)
-
-// bass
-$:note(`<
-
-  [[g#1 -]!4 - [g#1 -]!3 [f##1 - ]!4 - [f##1 -]!3]@2
-  [[f#1 -]!4 - [f#1 -]!3 [e#1 - ]!4 - [e#1 -]!3]@2
-  [[e1 -]!4 - [e1 -]!3 [d#1 - ]!4 - [d#1 -]!3]@2
-  [[e1 -]!4 - [e1 -]!3 [f#1 -]!4 - [f##1 - ]!3]@2
-  [[g#1 -]!8 [f##1 - ]!8]@2
-  [[f#1 -]!8 [e#1 - ]!8]@2
-  [[e1 -]!4 [d#1 - ]!4 [e1 -]!4 [f#1 - ]!4]@2
-  [[g#1 -]!4 - [g#1 -]!3 [g#1 -]!8]@2
-
-  [[a1 -]!4 - [a1 -]!3 [g#1 - ]!4 - [g#1 -]!3]@2
-  [[g1 -]!4 - [g1 -]!3 [f#1 - ]!4 - [f#1 -]!3]@2
-  [[f1 -]!4 - [f1 -]!3 [e1 - ]!4 - [e1 -]!3]@2
-  [[f1 -]!4 - [f1 -]!3 [g1 -]!4 - [g#1 -]!3]@2
-  [[a1 -]!8 [g#1 - ]!8]@2
-  [[g1 -]!8 [f#1 - ]!8]@2
-  [[f1 -]!4 [e1 - ]!4 [f1 -]!4 [g1 - ]!4]@2
-  [[a1 -]!4 - [a1 -]!3 [a1 -]!8]@2
-
-  [[a1 -]!8 [a1 -]!4 - [a1 -]!3]@2
-
->`).sound("gm_electric_bass_pick").n(5).speed(1.0).clip(1.0).distort(0.25).pan(0.5).room(0.2).gain(0.65).postgain(1.0)
+>`).sound("gm_pad_warm").n(6).transpose(0).speed(1.0).legato(1.2).adsr("0.2:0.0:1.0:0.4").pan(1.0).delay(0.0).room(0.4).hpf(200.0).lpf(20000.0).gain(0.4).postgain(1.0)
 
 // choir pad
 $:note(`<
 
-  [[g#3, d#4, b4, d#5] [f##3, d#4, a#4, d#5]]@2
-  [[f#3, d#4, b4, d#5] [e#3, c#4, g#4, c#5]]@2
-  [[e3, b3, g#4, e5] [d#3, d#4, a#3, f#5]]@2
-  [[e3, b3, g#4, e5] [[f#3, c#4, a#4, c#5] [f##3, d#4, f##4, a#4]]]@2
-  [[g#3, d#4, b4, d#5] [f##3, d#4, a#4, d#5]]@2
-  [[f#3, d#4, b4, d#5] [e#3, c#4, g#4, c#5]]@2
-  [[e3, b3, g#4, e5] [d#3, d#4, b4, d#5] [e3, b3, g#4, e5] [f#3, c#4, a#4, f#5]]@2
-  [[g#3, d#4, b4, g#5] [g#3, d#4, b4, d#5]]@2
+[-]@16
 
-  [[a3, e4, c5, e5] [g#3, e4, b4, e5]]@2
-  [[g3, e4, c5, e5] [f#3, d4, a4, d5]]@2
-  [[f3, c4, a4, f5] [e3, e4, b4, g5]]@2
-  [[f3, c4, a4, f5] [[g3, d4, b4, d5] [g#3, e4, g#4, b4]]]@2
-  [[a3, e4, c5, e5] [g#3, e4, b4, e5]]@2
-  [[g3, e4, c5, e5] [f#3, d4, a4, d5]]@2
-  [[f3, c4, a4, f5] [e3, e4, c5, e5] [f3, c4, a4, f5] [g3, d4, b4, g5]]@2
-  [[a3, e4, c5, a5] [a3, e4, c5, e5]]@2
+[-]@8
 
-  [[a3, e4, a4, d5] [a3, e4, a4, c5]]@2
+[-]@8
+[-]@8
 
->`).sound("gm_choir_aahs").n(6).speed(1.0).clip(1.05).pan("<0.45 0.55>").room(0.2).gain(0.4).postgain(1.0)
+[-]@16
+[-]@17
+
+[g#2, g#3, b4, d#5] [[f##2, f##3, b4, e5] [f##2, f##3, a#4, e5]] [f#2, g#3, b4, d#5] [e#2, e#3, g#4, c#5]
+[c#2, g#3, b4, e5] [d#2, f#3, a#4, c#5] [e2, g#3, b4, d#5] [[f#2, a#3, c#5, f#5] [f##2, f##3, a#4, d#5]]
+[g#2, g#3, b4, d#5] [[f##2, f##3, b4, e5] [f##2, f##3, a#4, e5]] [f#2, g#3, b4, d#5] [e#2, e#3, g#4, c#5]
+[[c#2, g#3, b4, e5] [d#2, f#3, a#4, c#5]] [[e2, g#3, b4, d#5] [f#2, a#3, c#5, f#5]] [g#2, a#3, c#5, d#5] [g#2, g#3, b4, d#5]
+[a2, a3, c5, e5] [[g#2, g#3, c5, f5] [g#2, g#3, b4, f5]] [g2, a3, c5, e5] [f#2, f#3, a4, d5]
+[d2, a3, c5, f5] [e2, g3, b4, d5] [f2, a3, c5, e5] [[g2, b3, d5, g5] [g#2, g#3, b4, e5]]
+[a2, a3, c5, e5] [[g#2, g#3, c5, f5] [g#2, g#3, b4, f5]] [g2, a3, c5, e5] [f#2, f#3, a4, d5]
+[[d2, a3, c5, f5] [e2, g3, b4, d5]] [[f2, a3, c5, e5] [g2, b3, d5, g5]] [a2, b3, d5, e5] [a2, a3, c5, e5]
+[a2, d4, e5, a5] [a2, c4, e5, a5]
+
+>`).sound("gm_choir_aahs").n(6).transpose(0).speed(1.0).legato(1.2).adsr("0.2:0.0:1.0:0.4").pan(0.5).delay(0.0).room(0.2).hpf(200.0).lpf(20000.0).gain(0.4).postgain(1.0)
+
+//strings
+$:note(`<
+
+[[g2, bb3, g4]@4 [bb3, a4]@2 bb4 c5]@2
+[[eb2, g4, d5]@3 bb4 [f2, c5]@2 a4@2]@2
+[[g2, d4, bb4]@3 c5 [g4, d5]@2 [bb4, f5]@2]@2
+[[eb3, g4, d5]@2 [bb4, f5]@2 [f3, c5]@2 [a4, d5]@2]@2
+
+[[g2, bb3, g4]@4 [bb3, a4]@2 bb4 c5]@2
+[[eb2, g4, d5]@3 f5 [f2, a3, c5]@2 [d4, a4, d5]@2]@2
+[[c3, eb4, bb4@2] c5@2 [d2, c4, f4, d5]@2 f4@2]@2
+[[eb2, bb3, d5, g5]@2 [f2, a3, c5, f5]@2 [g2, bb3, d5, g5]@4]@2
+
+[g2, bb3, d5] [g2, a3, c5]
+[g2, bb3, d5] [g2, a3, c5, f5]
+[g2, bb3, d5] [g2, a3, c5]
+[[g2, bb3, d5]@2 [g2, a3, c5, f5]@2] [[g2, bb3, d5, g5]@8 -@8]
+
+[g2, d4, bb4, g5] [eb2, d4, bb4, g5]
+[c2, eb4, bb4, g5] [d2, c4, a4, f#5]
+[g2, d4, bb4, g5] [eb2, d4, bb4, g5]
+[c2, eb4, bb4, g5] [d2, c4, a4, f#5]
+[g2, d4, bb4, g5] [f2, d4, bb4, g5]
+[eb2, bb3, c5, g5] [d2, c4, a4, d4, f#5]
+[g2, d4, bb4, g5] [f2, d4, bb4, g5]
+[eb2, bb3, c5, g5] [d2, c4, a4, d4, f#5]
+
+[g2, bb3, d5, g5] [f2, a3, c5, f5] [eb2, g3, c5, g5] [d2, a3, a4, f#5]
+[g2, bb3, d5, g5] [f2, a3, c5, f5] [eb2, g3, c5, g5] [[f2, a3, f4, f5] [d2, a3, a4, f#5]]
+[e2, e4, b4, g5] [c#2, e4, c#5, a5] [d2, d4, b4, g5] [d#2, b3, b4, f#5]
+[e2, b3, b4, g5] [c#2, a3, e5, a5] [[d2, b3, g4, g5] [d2, b3, f#5]] [[b1, b3, f#4, e5] [b1, b3, f#4, d#5]]
+[g2, bb3, d5, g5] [f2, a3, c5, f5] [eb2, g3, c5, g5] [d2, a3, a4, f#5]
+[g2, bb3, d5, g5] [f2, a3, c5, f5] [eb2, g3, c5, g5] [[f2, a3, f4, f5] [d2, a3, a4, f#5]]
+[e2, e4, b4, g5] [c#2, e4, c#5, a5] [d2, d4, b4, g5] [d#2, b3, b4, f#5]
+[d2, b3, b4, g5] [c#2, a3, e4, a5] [c2, b3, e4, g5] [b1, b3, f#4, e5] [b1, b3, f#4, d#5]
+
+[g#2, d#4, b4, g#5] [[f##2, e4, b4, f##5] [f##2, e4, a#4, f##5]] [f#2, d#4, b4, g#5] [e#2, c#4, g#4, e#5]
+[c#2, b3, g#4, e5] [d#2, c#4, a#4, f#5] [e2, b3, g#4, d#5] [[f#2, a#3, f#4, c#5] [f##2, a#3, d#4, d#5]]
+[g#2, d#4, b4, g#5] [[f##2, e4, b4, f##5] [f##2, e4, a#4, f##5]] [f#2, d#4, b4, g#5] [e#2, c#4, g#4, e#5]
+[[c#2, b3, g#4, e5] [d#2, c#4, a#4, f#5]] [[e2, b3, g#4, d#5] [f#2, a#3, f#4, c#5]] [g#2, d#4, c#5, a#5] [g#2, d#4, b4, g#5]
+[a2, e4, c5, a5] [[g#2, f4, c5, g#5] [g#2, f4, b4, g#5]] [g2, e4, c4, a5] [f#2, d4, a4, f#5]
+[d2, c4, a4, f5] [e2, d4, b4, g5] [f2, c4, a4, e5] [[g2, b3, g4, d5] [g#2, b3, e4, e5]]
+[a2, e4, c5, a5] [[g#2, f4, c5, g#5] [g#2, f4, b4, g#5]] [g2, e4, c4, a5] [f#2, d4, a4, f#5]
+[[d2, c4, a4, f5] [e2, d4, b4, g5]] [[f2, c4, a4, e5] [g2, b3, d5, g5]] [a2, e4, d5, b5] [a2, e4, c5, a5]
+[a2, e4, d5, a5] [a2, e4, c5, a5]
+
+>`).sound("gm_string_ensemble_1").n(9).transpose(0).speed(1.0).legato(1.2).adsr("0.2:0.0:1.0:0.4").pan(0.1).delay(0.0).room(0.4).hpf(0.0).lpf(20000.0).gain(0.4).postgain(1.0)
+
+// violin lead
+$:note(`<
+
+[-]@16
+
+[-]@8
+
+[g4@3 a4@3 bb4@2 - c5@3 d5@2 f5@2] [g5@7 [g5 a5]]
+[bb5 a5 bb5 a5 eb5@2 bb5 a5 bb5 a5 eb5@6]
+[a5 g5 a5 g5 d5@2 f#5 g5 f#5 d5@2 eb5 d5 c5 a4@2]
+[g4@3 a4@3 bb4@2 - c5@3 d5@2 f5@2] [g5@7 [g5 a5]]
+[bb5 a5 bb5 c6 g5@2 bb5 a5 bb5 c6 g5@4 - bb5]
+[a5 bb5 a5 c6 d6@2 f#5 g5 f#5 d5@2 eb5 d5 c5 a4@2]
+[g4@6 d5 [c5 bb4]] [a4@2 bb4 g4@8 -@2 d4 f4]
+[g4@2 f4 g4@7 - d4 g4 bb4 c5 d5] [f5@2 eb5 d5@3 c5 bb4 a4@3 d4 f#4 g4 a4 c5]
+[bb4@2 a4 g4@7 -@2 d5@2 c5 bb4] [a4@2 bb4 g4@10 - d4 f4]
+[g4@2 f4 g4@7 - d4 g4 bb4 c5 d5] [f5@2 eb5 d5@3 c5 bb4 a4@3 g4 a4 bb4 c5 d5]
+
+[g4] [-]@3
+[-]@4
+[g4@14 a4 b4] [a4@14 g4 a4] [b4@8 c5@6 b4 a4] [b4@8 b4@3 f#5@3 b4@2]
+[g5@14 a5 b5] [a5@6 g5 f#5 e5@6 e5 a5] [g5@6 f#5 e5 f#5@8] [e5@6 d#5 c#5 b4@8]
+[-]@8
+[-]@8 [b3@2 a#3 b3 c4 b3 e4 d#4 g4 e4 d#4 e4 g#4 a#4 b4 c#5]
+
+[d#5@6 e5 d#5 c##5@3 d#5@3 b5@2] [b5@6 c#6 b5 a#5@8] [b5@6 a#5 b5 g#5@3 a#5@3 b5@2] [d#6@8 c#6@6 b5 a#5]
+[g#5@8 d#6@6 c#6 b5] [a#5@6 g#5 a#5 f#6@3 g#6@3 f#6@2] [d#6@6 c#6 d#6 e6@3 d#6@3 c#6@2] [b5@3 a#5@3 b5@2 c#6@6 b5 a#5]
+[d#5@6 e5 d#5 c##5@3 d#5@3 b5@2] [b5@6 c#6 b5 a#5@8] [b5@6 a#5 b5 g#5@3 a#5@3 b5@2] [d#6@8 c#6@6 b5 a#5]
+[g#5@8 f#6@6 e6 d#6] [c#6@6 b5 c#6 d#6@3 f#5@3 b5@2] [a#5@14 b5 a#5] [g#5@14 -@2]
+[e5@6 f5 e5 d#5@3 e5@3 c6@2] [c6@6 d6 c6 b5@8] [c6@6 b5 c6 a5@3 b5@3 c6@2] [e6@8 d6@6 c6 b5]
+[a5@8 e6@6 d6 c6] [b5@6 a5 b5 g6@3 a6@3 g6@2] [e6@6 d6 e6 f6@3 e6@3 d6@2] [c6@3 b5@3 c6@2 d6@6 c6 b5]
+[e5@6 f5 e5 d#5@3 e5@3 c6@2] [c6@6 d6 c6 b5@8] [c6@6 b5 c6 a5@3 b5@3 c6@2] [e6@8 d6@6 c6 b5]
+[a5@8 g6@6 f6 e6] [d6@6 c6 d6 e6@3 g5@3 c6@2] [b5@14 c6 b5] [a5]
+[-]@2
+
+>`).sound("gm_violin").n(3).transpose(0).speed(1.0).legato(1.0).adsr("0.0:0.0:1.0:0.1").pan(0.4).delay(0.0).room(0.4).hpf(0.0).lpf(20000.0).gain(1.5).postgain(1.0)
+
+// violin lead double
+$:note(`<
+
+[-]@16
+
+[-]@8
+
+[d4@3 f4@3 g4@2 - a4@3 bb4@2 d5@2] [bb4@3 [a4 bb4] c5@4]
+[eb5 c5 eb5 c5 g4@2 eb5 c5 eb5 c5 g4@6]
+[c5 d5 c5 d5 a4@2 d5 eb5 d5 a4@2 c5 a4 d4 f#4@2]
+[d4@3 f4@3 g4@2 - a4@3 bb4@2 d5@2] [bb4@3 [a4 bb4] c5@4]
+[eb5 c5 eb5 g5 eb@2 eb5 c5 eb5 g5 c5@4 - eb5]
+[c5 d5 c5 a5 f#5@2 d5 eb5 d5 a4@2 c5 a4 d4 f#4@2]
+[d4@6 bb4 [a4 g4]] [f4@2 g4 d4@8 -@2 bb3 d4]
+[eb4@2 d4 eb4@7 - bb3 d4 g4 a4 bb4] [d5@2 c5 a4@3 d4 g4 f#@3 a3 d4 eb4 f#4 d4]
+[g4@2 f4 d4@7 -@2 bb4@2 a4 g4] [f4@2 g4 d4@10 - bb3 d4]
+[eb4@2 d4 eb4@7 - bb3 d4 g4 a4 bb4]  [d5@2 c5 a4@3 d4 g4 f#@3 d4 f#4 g4 a4 bb4]
+
+[bb3] [-]@3
+[-]@4
+[b3@14 e4 g4] [c#4@14 e4 c#4] [d4@8 g4@6 d4 e4] [f#4@8 f#4@3 b4@3 d#4@2]
+[e4@14 f#4 g4] [c#5@6 e5 d5 c#5@6 c#5 e5] [b4@6 d4 c#4 b4@8] [f#4@6 b4 f#4 d#4@8]
+[-]@8
+[-]@8 [-@8 -@4 b3 d#4 g#4 a#4]
+
+[b4@6 c#5 b4 a#4@3 b4@3 d#5@2] [f##5@6 a#5 g#5 f##5@8] [d#5@6 f#5 g#5 d#5@3 f#5@3 g#5@2] [e#5@8 g#5@6 g#5 c#5]
+[b4@8 g#5@6 a#5 g#5] [f#5@6 d#5 f#5 a#5@3 c#6@3 d#6@2] [g#5@6 a#5 b5 c#6@3 b5@3 g#5@2] [c#5@3 f#5@3 g#5@2 a#5@6 f##5 d#5]
+[b4@6 c#5 b4 a#4@3 b4@3 d#5@2] [f##5@6 a#5 g#5 f##5@8] [d#5@6 f#5 g#5 d#5@3 f#5@3 g#5@2] [e#5@8 g#5@6 g#5 d#5]
+[e5@8 d#6@6 c#6 b5] [g#5@6 e5 g#5 a#5@3 c#5@3 f#5@2] [c#5@14 d#5 c#5] [b4@14 -@2]
+[c5@6 d5 c5 b4@3 c5@3 e5@2] [g#5@6 b5 a5 g#5@8] [e5@6 g5 a5 e5@3 g5@3 a5@2] [f#5@8 a5@6 a5 d5]
+[c5@8 a5@6 b5 a5] [g5@6 e5 g5 b5@3 d6@3 e6@2] [a5@6 b5 c6 d6@3 c6@3 a5@2] [d5@3 g5@3 a5@2 b5@6 g#5 e5]
+[c5@6 d5 c5 b4@3 c5@3 e5@2] [g#5@6 b5 a5 g#5@8] [e5@6 g5 a5 e5@3 g5@3 a5@2] [f#5@8 a5@6 a5 d5]
+[f5@8 e6@6 d6 c6] [f5@6 a5 f5 b5@3 d5@3 g5@2] [d5@14 e5 d5] [c5]
+[-]@2
+
+>`).sound("gm_violin").n(3).transpose(0).speed(1.0).legato(1.0).adsr("0.0:0.0:1.0:0.1").pan(0.6).delay(0.0).room(0.4).hpf(0.0).lpf(20000.0).gain(0.6).postgain(1.0)
+
+// piano lead
+$:note(`<
+
+[g5@3 d5@3 f5@2 - c5@3 d5@2 f5 bb5] [a5@3 f5@3 g5@2 -@2 c5 d5 f5 c5 d5 f4]
+[g5@3 d5@3 f5@2 - c5@3 d5 c5 d5 bb5] [a5@3 f5@3 c5@2 g5@4 f5@4]
+[g5@3 d5@3 f5@2 - c5@3 d5@2 f5 bb5] [a5@3 c6@3 f5@2 - c5@2 d5 f5 c5 d5 f5]
+[g5@3 d5@3 f5@2 - c5@3 d5@2 c5 bb4] [a4@3 f4@3 c5@2 - d5 eb5 d5 c5 bb4 a4@2]
+
+[g5@3 d5@3 f5@2 - c5@3 d5@2 f5 bb5] [a5@3 f5@3 g5@2 -@2 c5 d5 f5 c5 d5 f4]
+[g5@3 d5@3 f5@2 - bb4 c5 d5 d5 c5 d5 bb5] [a5@3 f5@3 c5@2 g5@3 d5 f5 c5 d5 bb4]
+[g5@3 d5@3 f5@2 - c5@3 d5@2 c5 bb4] [a4@3 f4@3 c5@2 - c4 f4 bb4 a4 f4 c4@2]
+[c5@3 bb4@3 c5@2 bb4@4 d5@2 f5@2 ] [f5@3 f5@3 g5 f5 g5@4 -@4]
+
+[g4@3 a4@3 bb4@2 - c5@2 c4 d4 f4 g4 bb4] [a4@3 f4@3 f4@2 - bb4@3 a4@4]
+[g4@3 a4@3 bb4@2 - c5@2 c4 d4 f4 bb4 c5] [d5@3 bb4@3 a4@2 - f4 bb4 c5 d5 c5 d5 f5]
+[g4@3 a4@3 bb4@2 - c5@2 c4 d4 f4 g4 bb4] [a4@3 f4@3 f4@2 - bb4@3 a4@4]
+[g4@3 a4@3 bb4@2 - c5@2 c4 d4 f4 bb4 c5] [c5@3 d5@3 f5@2 - f5@3 g5 -@3]
+
+[-]@8
+[g4@6 d5 [c5 bb4]] [a4@2 bb4 g4@8 -@2 d4 f4]
+[g4@2 f4 g4@7 - d4 g4 bb4 c5 d5] [f5@2 eb5 d5@3 c5 bb4 a4@3 d4 f#4 g4 a4 c5]
+[bb4@2 a4 g4@7 -@2 d5@2 c5 bb4] [a4@2 bb4 g4@10 - d4 f4]
+[g4@2 f4 g4@7 - d4 g4 bb4 c5 d5] [f5@2 eb5 d5@3 c5 bb4 a4@3 g4 a4 bb4 c5 d5]
+
+[-]@7 [-@8 -@4 c5@2 bb4 a4]
+[g4@14 a4 b4] [a4@14 g4 a4] [b4@8 c5@6 b4 a4] [b4@8 b4@3 f#5@3 b4@2]
+[g5@14 a5 b5] [a5@6 g5 f#5 e5@6 e5 a5] [g5@6 f#5 e5 f#5@8] [e5@6 d#5 c#5 b4@8]
+[-]@8
+[-]@7 [e5@14 d#5 c#5] [d#5]
+
+[-]@16
+[-]@16
+[-]@2
+
+>`).sound("gm_piano").n(2).transpose("<0, -12>").speed(1.0).legato(1.2).adsr("0.0:4.0:0.0:0.1").pan(0.6).delay(0.0).room(0.4).hpf(200.0).lpf(20000.0).gain(0.6).postgain(1.0)
 
 // piano
 $:note(`<
 
-  [[g#2, g#3, d#4, g#4, b4] [f##2, f##3, d#4, f##4, a#4]]@2
-  [[f#2, f#3, d#4, f#4, b4] [e#2, e#3, e#4, g#4, c#5]]@2
-  [[e2, e3, e4, g#4, b4] [d#2, d#3, d#4, f#4, a#4]]@2
-  [[e2, e3, e4, g#4, b4] [[f#2, f#3, c#4, f#4, a#4] [f##2, f##3, f##4, a#4, d#5]]]@2
-  [[g#2, g#3, d#4, g#4, b4] [f##2, f##3, d#4, f##4, a#4]]@2
-  [[f#2, f#3, d#4, f#4, b4] [e#2, e#3, e#4, g#4, c#5]]@2
-  [[e2, e3, e4, g#4, b4] [d#2, d#3, d#4, f#4, b4] [e2, e3, e4, g#4, b4] [f#2, f#3, f#4, a#4, c#5]]@2
-  [[g#2, g#3, d#4, g#4, a#4] [g#2, g#3, b3, d#4, g#4]]@2
+[g2, g3, d4, g4, bb4]@2
+[eb2, eb3, g4, bb4, d5] [f2, f3, f4, a4, c5]
+[g2, g3, d4, g4, bb4]@2
+[eb2, eb3, g4, bb4, d5] [f2, f3, f4, a4, c5]
 
-  [[a2, a3, a4, c5, e5] [g#2, g#3, g#4, b4, e5]]@2
-  [[g2, g3, g4, c5, e5] [f#2, f#3, f#4, a4, d5]]@2
-  [[f2, f3, f4, a4, c5] [e2, e3, g4, b4, e5]]@2
-  [[f2, f3, a4, c5, f5] [[g2, g3, g4, b4, d5] [g#2, g#3, e4, b4, e5]]]@2
-  [[a2, a3, a4, c5, e5] [g#2, g#3, g#4, b4, e5]]@2
-  [[g2, g3, g4, c5, e5] [f#2, f#3, f#4, a4, d5]]@2
-  [[f2, f3, a4, c5, f5] [e2, e3, g4, c5, g5] [f2, f3, a4, c5, f5] [g2, g3, b4, d5, g5]]@2
-  [[a2, a3, c5, e5, b5] [a2, a3, c5, e5, a5]]@2
+[g2, g3, d4, g4, bb4]@2
+[eb2, eb3, g4, bb4, d5] [f2, f3, f4, a4, c5]
+[c2, c3, g4, bb4, d5] [d2, d3, f4, a4, c5]
+[[eb2, eb3, d4, g4, bb4] [f2, f3, c4, f4, a4]] [g2, g3, d4, f4, bb4]
 
-  [[a2, a3, e4, a4, d5] [a2, a3, e4, a4, c5]]@2
+[g2, g4, bb4, d5] [g2, f4, a4, c5]
+[g2, g4, bb4, d5] [g2, a4, c5, f5]
+[g2, g4, bb4, d5] [g2, f4, a4, c5]
+[g2, g4, bb4, d5] [[g2, bb4, d5, g5]@8 -@8]
 
->`).sound("gm_piano").n(4).speed(1.0).clip(1.05).adsr("0.0:4.0:0.0:0.8").pan(0.72).room(0.2).hpf(100.0).gain("<0.24 0.25>").postgain(1.0)
+[g2, g4, bb4, d5] [eb2, g4, bb4, d5]
+[c2, g4, bb4, eb5] [d2, c3, eb4, f#4, a4, d5]
+[g2, g4, bb4, d5] [eb2, g4, bb4, d5]
+[c2, g4, bb4, eb5] [d2, c3, eb4, f#4, a4, d5]
+[g2, bb4, d5, g5] [f2, bb4, d5, g5]
+[eb2, bb2, c5, d5, g5] [d2, a2, a4, d5, f#5]
+[g2, bb4, d5, g5] [f2, bb4, d5, g5]
+[eb2, bb2, c5, d5, g5] [d2, a2, a4, d5, f#5]
+
+[g2, g4, bb4, d5] [f2, a4, c5, f5] [eb2, g4, c5, g5] [d2, d3, a4, d5, f#5]
+[g2, g4, bb4, d5] [f2, a4, c5, f5] [eb2, g4, c5, g5] [[f2, a4, c5, f5] [d2, d3, a4, d5, f#5]]
+[e2, b4, e5, g5] [c#2, a4, e5, a5] [d2, d3, d5, g5, b5] [d#2, d#3, b4, f#5, b5]
+[e2, b4, e5, g5] [c#2, a4, e5, a5] [[d2, b4, d5, g5] [f#4, f#5]] [[b1, e4, b4, e5] [b1, d#4, b4, d#4]]
+[g2, g4, bb4, d5] [f2, a4, c5, f5] [eb2, g4, c5, g5] [d2, d3, a4, d5, f#5]
+[g2, g4, bb4, d5] [f2, a4, c5, f5] [eb2, g4, c5, g5] [[f2, a4, c5, f5] [d2, d3, a4, d5, f#5]]
+[e2, b4, e5, g5] [c#2, a4, e5, a5] [d2, d3, d5, g5, b5] [d#2, d#3, b4, f#5, b5]
+[d2, d3, b4, d5, g5] [c#2, e4, a4, e5] [c2, b3, e4, g4, b4] [b1, b3, e4, f#4, b4] [b1, b3, d#4, f#4, b4]
+
+[g#2, g#3, d#4, g#4, b4] [[f##2, f##3, e4, f##4, b4] [f##2, f##3, e4, f##4, a#4]] [f#2, f#3, d#4, g#4, b4] [e#2, e#3, e#4, g#4, c#5]
+[c#2, c#3, e4, g#4, b4] [d#2, d#3, f#4, a#4, c#5] [e2, e3, d#4, g#4, b4] [[f#2, f#3, c#4, f#4, a#4] [f##2, f##3, d#4, f##4, a#4]]
+[g#2, g#3, d#4, g#4, b4] [[f##2, f##3, e4, f##4, b4] [f##2, f##3, e4, f##4, a#4]] [f#2, f#3, d#4, g#4, b4] [e#2, e#3, e#4, g#4, c#5]
+[[c#2, c#3, e4, g#4, b4] [d#2, d#3, f#4, a#4, c#5]] [[e2, e3, d#4, g#4, b4] [f#2, f#3, c#4, f#4, a#4]] [g#2, g#3, c#4, d#4, a#4] [g#2, g#3, b3, d#4, g#4, b4]
+[a2, a3, e4, a4, c5] [[g#2, g#3, f4, g#4, c5] [g#2, g#3, f4, g#4, b4]] [g2, g3, e4, a4, c5] [f#2, f#3, f#4, a4, d5]
+[d2, d3, f4, a4, c5] [e2, e3, g4, b4, d5] [f2, f3, e4, a4, c5] [[g2, g3, d4, g4, b4] [g#2, g#3, e4, g#4, b4]]
+[a2, a3, e4, a4, c5] [[g#2, g#3, f4, g#4, c5] [g#2, g#3, f4, g#4, b4]] [g2, g3, e4, a4, c5] [f#2, f#3, f#4, a4, d5]
+[[d2, d3, f4, a4, c5] [e2, e3, g4, b4, d5]] [[f2, f3, e4, a4, c5] [g2, g3, d4, g4, b4]] [a2, a3, d4, e4, b4] [a2, a3, c4, e4, a4, c5]
+[a2, a3, d4, a4, d5] [a2, a3, c4, e4, a4, c5]
+
+>`).sound("gm_piano").n(4).transpose(0).speed(1.0).legato(1.0).adsr("0.0:4.0:0.0:0.8").pan(0.8).delay(0.0).room(0.4).hpf(200.0).lpf(20000.0).gain(0.3).postgain(1.0)
 
 // e piano
 $:note(`<
 
-  [[g#3, d#4, g#4, b4] [f##3, d#4, f##4, a#4]]@2
-  [[f#3, d#4, f#4, b4] [e#3, e#4, g#4, c#5]]@2
-  [[e3, e4, g#4, b4] [d#3, d#4, f#4, a#4]]@2
-  [[e3, e4, g#4, b4] [[f#3, c#4, f#4, a#4] [f##3, f##4, a#4, d#5]]]@2
-  [[g#3, d#4, g#4, b4] [f##3, d#4, f##4, a#4]]@2
-  [[f#3, d#4, f#4, b4] [e#3, e#4, g#4, c#5]]@2
-  [[e3, e4, g#4, b4] [d#3, d#4, f#4, b4] [e3, e4, g#4, b4] [f#3, f#4, a#4, c#5]]@2
-  [[g#3, d#4, g#4, a#4] [g#3, b3, d#4, g#4]]@2
+[-]@16
 
-  [[a3, a4, c5, e5] [ g#3, g#4, b4, e5]]@2
-  [[g3, g4, c5, e5] [ f#3, f#4, a4, d5]]@2
-  [[f3, f4, a4, c5] [e3, g4, b4, e5]]@2
-  [[f3, a4, c5, f5] [[g3, g4, b4, d5] [g#3, e4, b4, e5]]]@2
-  [[a3, a4, c5, e5] [ g#3, g#4, b4, e5]]@2
-  [[g3, g4, c5, e5] [ f#3, f#4, a4, d5]]@2
-  [[f3, a4, c5, f5] [e3, g4, c5, g5] [f3, a4, c5, f5] [g3, b4, d5, g5]]@2
-  [[a3, c5, e5, b5] [a3, c5, e5, a5]]@2
+[g2, g3, g4, bb4, d5] [g2, g3, f4, a4, c5]
+[g2, g3, g4, bb4, d5] [g2, g3, a4, c5, f5]
+[g2, g3, g4, bb4, d5] [g2, g3, f4, a4, c5]
+[g2, g3, g4, bb4, d5] [[g2, g3, bb4, d5, g5]@8 -@8]
 
-  [[a3, e4, a4, d5] [a3, e4, a4, c5]]@2
+[g2, g3, bb3, d4] [eb2, g3, bb3, d4]
+[c2, g3, bb3, eb4] [d2, c3, f#3, a3, d4]
+[g2, g3, bb3, d4] [eb2, g3, bb3, d4]
+[c2, g3, bb3, eb4] [d2, c3, f#3, a3, d4]
+[g2, bb3, d4, g4] [f2, bb3, d4, g4]
+[eb2, bb2, c4, d4, g4] [d2, a3, d4, f#4]
+[g2, bb3, d4, g4] [f2, bb3, d4, g4]
+[eb2, bb2, c4, d4, g4] [d2, a3, d4, f#4]
 
->`).sound("gm_epiano1").n(0).speed(1.0).clip(1.05).adsr("0.0:4.0:0.0:0.8").phaser(0.6).phaserdepth(0.6).pan(0.28).room(0.2).hpf(100.0).gain("<0.32 0.33>").postgain(1.0)
+[g2, g3, bb3, d4] [f2, a3, c4, f4] [eb2, g3, c4, eb4] [d2, f#3, a3, d4]
+[g2, g3, bb3, d4] [f2, a3, c4, f4] [eb2, g3, c4, eb4] [[f2, f3, a3, c4] [d2, f#3, a3, d4]]
+[e2, g3, b3, e4] [c#2, a3, c#4, e4] [d2, b3, d4, g4] [d#2, b3, f#4, a4]
+[e2, b3, e4, g4] [c#2, a3, c#4, e4] [[d2, b4, d5, g5] [d4, f#4]] [[b1, f#3, b3, e4] [b1, f#3, b3, d#4]]
+[g2, g3, bb3, d4] [f2, a3, c4, f4] [eb2, g3, c4, eb4] [d2, f#3, a3, d4]
+[g2, g3, bb3, d4] [f2, a3, c4, f4] [eb2, g3, c4, eb4] [[f2, f3, a3, c4] [d2, f#3, a3, d4]]
+[e2, g3, b3, e4] [c#2, a3, c#4, e4] [d2, b3, d4, g4] [d#2, b3, f#4, a4]
+[d2, d4, g4, b4] [c#2, c#4, e4, a4] [c2, b3, e4, g4] [b1, b3, e4, f#4] [b1, b3, d#4, f#4]
+
+[g#2, d#4, b4] [[f##2, e4, b4] [f##2, e4, a#4]] [f#2, d#4, g#4, b4] [e#2, e#3, c#4, g#4]
+[c#2, b3, e4, g#4] [d#2, a#3, c#4, f#4] [e2, b3, d#4, g#4] [[f#2, a#3, c#4, f#4] [f##2, a#3, d#4, f##4]]
+[g#2, d#4, b4] [[f##2, e4, b4] [f##2, e4, a#4]] [f#2, d#4, g#4, b4] [e#2, e#3, c#4, g#4]
+[[c#2, b3, e4, g#4] [d#2, a#3, c#4, f#4]] [[e2, b3, d#4, g#4] [f#2, c#4, f#4, a#4]] [g#2, c#4, d#4, a#4] [g#2, b3, d#4, g#4]
+[a2, e4, c5] [[g#2, f4, c5] [g#2, f4, b4]] [g2, e4, a4, c5] [f#2, f#3, d4, a4]
+[d2, c4, f4, a4] [e2, b3, d4, g4] [f2, c4, e4, a4] [[g2, b3, d4, g4] [g#2, b3, e4, g#4]]
+[a2, e4, c5] [[g#2, f4, c5] [g#2, f4, b4]] [g2, e4, a4, c5] [f#2, f#3, d4, a4]
+[[d2, c4, f4, a4] [e2, b3, d4, g4]] [[f2, c4, e4, a4] [g2, b3, d4, g4]] [a2, d4, e4, b4] [a2, c4, e4, a4]
+[a2, d4, e4, a4] [a2, c4, e4, a4]
+
+>`).sound("gm_epiano1").n(0).transpose(0).speed(1.0).legato(1.0).adsr("0.0:4.0:0.0:0.8").phaser(0.6).phaserdepth(0.6).pan(0.2).room(0.4).hpf(200.0).lpf(20000.0).gain(0.3).postgain(1.0)
+
+// trumpet
+$:note(`<
+
+[-]@16
+
+[-]@8
+
+[-]@8
+[-]@8
+
+[-]@15 [-@8 -@4 b2 c#3 d#3 f#3]
+[g3@6 d3 f3 g3@3 d3@3 d4@2] [c4@3 f3@10 - c4 f4] [eb4@6 eb3 f3 g3@3 bb3@3 d4@2] [c4@6 bb3 a3 f#3@3 c4@3 a3@2]
+[bb3 a3 g3@4 d3 f3 g3@3 d3@3 d4@2] [c4@6 c4 bb3 a3@3 c4@3 f4@2] [eb4@3 bb3@8 g3 bb3 g3 bb3 d4] [c4@6 bb3 c4 d4@4 c4@2 bb3 a3]
+[g3@14 a3 b3] [a3@14 g3 a3] [b3@8 c4@6 b3 a3] [b3@8 b3@3 f#4@3 b3@2]
+[g4@14 a4 b4] [a4@6 g4 f#4 e4@6 g4 a4] [b4@3 a4@3 b4@2 c5@3 b4@3 c5@2] [e5@14 d#5 c#5] [d#5]
+
+[-]@16
+[-]@16
+[-]@2
+
+>`).sound("gm_trumpet").n(3).transpose(12).speed(1.0).legato(1.0).adsr("0.0:0.0:1.0:0.1").pan(0.6).delay(0.0).room(0.4).hpf(0.0).lpf(20000.0).gain(1.2).postgain(1.0)
+
+// trumpet double
+$:note(`<
+
+[-]@16
+
+[-]@8
+
+[-]@8
+[-]@8
+
+[-]@15 [-@8 -@4 f#2 a#2 b2 d#3]
+[d3@6 bb2 d3 d3@3 g2@3 bb3@2] [f3@3 c3@10 - f3 c4] [bb3@6 bb2 d3 eb3@3 g3@3 bb3@2] [a3@6 g3 f#3 d3@3 f#3@3 d3@2]
+[g3 f3 d3@4 bb2 d3 d3@3 bb2@3 bb3@2] [a3@6 a3 g3 f3@3 a3@3 c4@2] [bb3@3 eb3@8 bb2 eb3 bb2 eb3 g3] [a3@6 f3 a3 f#3@4 a3@2 f#3 d3]
+[b2@14 e3 g3] [c#3@14 e3 c#3] [d3@8 g3@6 d3 e3] [f#3@8 f#3@3 b3@3 d#3@2]
+[d4@14 f#4 g4] [e4@6 a3 d4 c#4@6 e4 f#4] [g4@3 f#4@3 b4@2 a4@3 g4@3 e4@2] [f#4@16] [b3]
+
+[-]@16
+[-]@16
+[-]@2
+
+>`).sound("gm_trumpet").n(3).transpose(12).speed(1.0).legato(1.0).adsr("0.0:0.0:1.0:0.1").pan(0.4).delay(0.0).room(0.4).hpf(0.0).lpf(20000.0).gain(0.6).postgain(1.0)
+
+// guitar double
+$:note(`<
+
+[-] [-]
+[-@8 - d5 c5 d5 - d5 c5 d5] [-@8 - d5 eb5 d5 c5 bb4 a4@2]
+[g5@3 d5@3 f5@2 - c5@3 d5@2 f5 bb5] [a5@3 c6@3 f5@2 - c5@2 d5 f5 c5 d5 f5]
+[g5@3 d5@3 f5@2 - c5@3 d5@2 c5 bb4] [a4@3 f4@3 c5@2 - d5 eb5 d5 c5 bb4 a4@2]
+
+[g5@3 d5@3 f5@2 - c5@3 d5@2 f5 bb5] [a5@3 f5@3 g5@2 -@2 c5 d5 f5 c5 d5 f4]
+[g5@3 d5@3 f5@2 - bb4 c5 d5 d5 c5 d5 bb5] [a5@3 f5@3 c5@2 g5@3 d5 f5 c5 d5 bb4]
+[g5@3 d5@3 f5@2 - c5@3 d5@2 c5 bb4] [a4@3 f4@3 c5@2 - c4 f4 bb4 a4 f4 c4@2]
+[c5@3 bb4@3 c5@2 bb4@4 d5@2 f5@2] [f5@3 f5@3 g5 f5 g5@4 -@4]
+
+[g4@3 a4@3 bb4@2 - c5@2 c4 d4 f4 g4 bb4] [a4@3 f4@3 f4@2 - bb4@3 a4@4]
+[g4@3 a4@3 bb4@2 - c5@2 c4 d4 f4 bb4 c5] [d5@3 bb4@3 a4@2 - f4 bb4 c5 d5 c5 d5 f5]
+[g4@3 a4@3 bb4@2 - c5@2 c4 d4 f4 g4 bb4] [a4@3 f4@3 f4@2 - bb4@3 a4@4]
+[g4@3 a4@3 bb4@2 - c5@2 c4 d4 f4 bb4 c5] [c5@3 d5@3 f5@2 - f5@3 g5 -@3]
+
+[-]@8
+[-]@8
+
+[-]@16
+[-]@17
+
+[-]@16
+[-]@16
+[-]@2
+
+>`).sound("gm_acoustic_guitar_steel").n(9).transpose("<0, 12>").speed(1.0).legato(1.0).adsr("0.0:4.0:0.0:0.8").pan(0.4).delay(0.0).room(0.4).hpf(0.0).lpf(3000.0).gain(0.6).postgain(1.0)
+
+// e guitar lead
+$:note(`<
+
+[-]@16
+
+[-]@8
+
+[-]@8
+[-]@8
+
+[g3@6 d3 f3 g3@3 d3@3 d4@2] [c4@3 f3@10 - c4 f4] [eb4@6 eb3 f3 g3@3 bb3@3 d4@2] [c4@6 bb3 a3 f#3@3 c4@3 a3@2]
+[bb3 a3 g3@4 d3 f3 g3@3 d3@3 d4@2] [c4@6 c4 bb3 a3@3 c4@3 f4@2] [eb4@3 bb3@8 g3 bb3 g3 bb3 d4] [c4@6 bb3 c4 d4@4 c4@2 bb3 a3]
+[g -] [-]@7
+[-]@17
+
+[-]@16
+[-]@16
+[-]@2
+
+>`).sound("gm_overdriven_guitar").n(6).transpose(0).speed(1.0).legato(1.0).adsr("0.0:0.0:1.0:0.1").distort(0.25).pan(0.5).delay(0.0).room(0.4).hpf(0.0).lpf(20000.0).gain(1.4).postgain(1.0)
+
+// e guitar lead double
+$:note(`<
+
+[-]@8
+[-]@7 [-@8 -@4 c3 d3 f2 g2]
+
+[g2@3 g2@3 g2@3 g2@2 d2 d2 f2 c2 d2]!3
+[g2@3 g2@3 g2@3 g2@2 d2 d2 f2 c3 d3]
+
+[g2@3 g2@3 g2@3 g2@2 d2 d2 f2 c2 d2]!3
+[g2@3 g2@3 f2@3 g2@2 f2 g2 -@3]
+
+[-]@8
+[-]@8
+
+[d3@6 bb2 d3 d4@3 bb3@3 bb3@2] [f3@3 c3@10 - f3 c4] [bb3@6 bb2 d3 eb3@3 g3@3 bb3@2] [a3@6 g3 f#3 d3@3 f#3@3 d3@2]
+[g3 f3 d3@4 bb2 d3 d3@3 bb2@3 bb3@2] [a3@6 a3 g3 f3@3 a3@3 c4@2] [bb3@3 eb3@8 bb2 eb3 bb2 eb3 g3] [a3@6 f3 a3 f#3@4 a3@2 f#3 d3]
+[-@14 a3 b3] [a3@14 g3 a3] [b3@8 c4@6 b3 a3] [b3@8 b3@3 f#4@3 b3@2]
+[g4@14 a4 b4] [a4@6 g4 f#4 e4@6 e4 a4] [g4@6 f#4 e4 f#4@8] [e4@6 d#4 c#4 b3@8]
+[-]@17
+
+[-]@16
+[-]@16
+[-]@2
+
+>`).sound("gm_overdriven_guitar").n(6).transpose(0).speed(1.0).legato(1.0).adsr("0.0:0.0:1.0:0.1").distort(0.25).pan(0.5).delay(0.0).room(0.4).hpf(0.0).lpf(20000.0).gain(0.6).postgain(1.0)
+
+// e guitar rhythm left
+// shouldn't use tranpose(0, 7, 12) (power chords) for whole rhythm guitar section since it will cause voicing issues... but too lazy to rewrite everything, it'll do for now
+$:note(`<
+
+[-]@16
+
+[-]@4
+[g2@3 g2@3 g2@2 - g2@2 f2 f2 g2 g2 g2]!3 [g2@3 g2@3 g2@2 f2 g2@2 f2 g2 -@3]
+
+[g2 g2 - g2 g2 - g2 g2 - g2 g2 - g2@2 g2@2] [eb2 eb2 - eb2 eb2 - eb2 eb2 - eb2 eb2 - eb2@2 eb2@2]
+[c2 c2 - c2 c2 - c2 c2 - c2 c2 - c2@2 c2@2] [d2 d2 - d2 d2 - d2 d2 - d2 d2 - d2@2 d2@2]
+[g2 g2 - g2 g2 - g2 g2 - g2 g2 - g2@2 g2@2] [eb2 eb2 - eb2 eb2 - eb2 eb2 - eb2 eb2 - eb2@2 eb2@2]
+[c2 c2 - c2 c2 - c2 c2 - c2 c2 - c2@2 c2@2] [d2 d2 - d2 d2 - d2 d2 - d2 d2 - d2@2 d2@2]
+[g2 g2 - g2 g2 - g2 g2 - g2 g2 - g2@2 g2@2] [g2 g2 - g2 g2 - g2 g2 - g2 g2 - g2@2 g2@2]
+[eb2 eb2 - eb2 eb2 - eb2 eb2 - eb2 eb2 - eb2@2 eb2@2] [d2 d2 - d2 d2 - d2 d2 - d2 d2 - d2@2 d2@2]
+[g2 g2 - g2 g2 - g2 g2 - g2 g2 - g2@2 g2@2] [g2 g2 - g2 g2 - g2 g2 - g2 g2 - g2@2 g2@2]
+[eb2 eb2 - eb2 eb2 - eb2 eb2 - eb2 eb2 - eb2@2 eb2@2] [d2 d2 - d2 d2 - d2 d2 - d2 d2 - d2@2 d2@2]
+
+[f2 g2 - f2 g2 - f2 g2 - f2 g2 - g2@2 g2@2]!7 [f2 g2 - f2 g2 - f2 g2 - f2 d2 - d2@2 d2@2]
+[e2 e2 - e2 e2 - e2 e2 - e2 e2 - e2@2 e2@2] [a2 a2 - a2 a2 - a2 a2 - a2 a2 - a2@2 a2@2] [g2 g2 - g2 g2 - g2 g2 - g2 g2 - g2@2 g2@2] [b2 b2 - b2 b2 - b2 b2 - b2 b2 - b2@2 b2@2]
+[e2 e2 - e2 e2 - e2 e2 - e2 e2 - e2@2 e2@2] [a2 a2 - a2 a2 - a2 a2 - a2 a2 - a2@2 a2@2] [g2 g2 - g2 g2 - g2 g2 - b2 b2 - b2@2 b2@2] [b2 b2 - b2 b2 - b2 b2 - b2 b2 - b2@2 b2@2]
+[f2 g2 - f2 g2 - f2 g2 - f2 g2 - g2@2 g2@2]!7 [f2 g2 - f2 g2 - f2 g2 - f2 d2 - d2@2 d2@2]
+[e2 e2 - e2 e2 - e2 e2 - e2 e2 - e2@2 e2@2] [a2 a2 - a2 a2 - a2 a2 - a2 a2 - a2@2 a2@2] [g2 g2 - g2 g2 - g2 g2 - g2 g2 - g2@2 g2@2] [b2 b2 - b2 b2 - b2 b2 - b2 b2 - b2@2 b2@2]
+[g2 g2 - g2 g2 - g2 g2 - g2 g2 - g2@2 g2@2] [a2 a2 - a2 a2 - a2 a2 - a2 a2 - a2@2 a2@2] [c3 c3 - c3 c3 - c3 c3 - c3 c3 - c3@2 c3@2] [b2 b2 - b2 b2 - b2 b2 - b2 b2 - b2@2 b2@2] [b2]
+
+[g#2 g#2 - g#2 g#2 - g#2 g#2 - g#2 g#2 - g#2 g#2 g#2@2] [e2 e2 - e2 e2 - e2 e2 - d#2 d#2 - d#2 d#2 d#2@2] [b2 b2 - b2 b2 - b2 b2 - b2 b2 - b2 b2 b2@2] [c#3 c#3 - c#3 c#3 - c#3 c#3 - c#3 c#3 - c#3 c#3 c#3@2]
+[c#2 c#2 - c#2 c#2 - c#2 c#2 - c#2 c#2 - c#2 c#2 c#2@2] [d#2 d#2 - d#2 d#2 - d#2 d#2 - d#2 d#2 - d#2 d#2 d#2@2] [e2 e2 - e2 e2 - e2 e2 - e2 e2 - e2 e2 e2@2] [f#2 f#2 - f#2 f#2 - f#2 f#2 - d#2 d#2 - d#2 d#2 d#2@2]
+[g#2 g#2 - g#2 g#2 - g#2 g#2 - g#2 g#2 - g#2 g#2 g#2@2] [e2 e2 - e2 e2 - e2 e2 - d#2 d#2 - d#2 d#2 d#2@2] [b2 b2 - b2 b2 - b2 b2 - b2 b2 - b2 b2 b2@2] [c#3 c#3 - c#3 c#3 - c#3 c#3 - c#3 c#3 - c#3 c#3 c#3@2]
+[c#2 c#2 - c#2 c#2 - c#2 c#2 - d#2 d#2 - d#2 d#2 d#2@2] [e2 e2 - e2 e2 - e2 e2 - f#2 f#2 - f#2 f#2 f#2@2] [g#2 g#2 - g#2 g#2 - g#2 g#2 - g#2 g#2 - g#2@2 g#2@2] [g#2 g#2 - g#2 g#2 - g#2 g#2 - g#2 g#2 - g#2@2 g#2@2]
+[a2 a2 - a2 a2 - a2 a2 - a2 a2 - a2 a2 a2@2] [f2 f2 - f2 f2 - f2 f2 - e2 e2 - e2 e2 e2@2] [c3 c3 - c3 c3 - c3 c3 - c3 c3 - c3 c3 c3@2] [d3 d3 - d3 d3 - d3 d3 - d3 d3 - d3 d3 d2@2]
+[d2 d2 - d2 d2 - d2 d2 - d2 d2 - d2 d2 d2@2] [e2 e2 - e2 e2 - e2 e2 - e2 e2 - e2 e2 e2@2] [f2 f2 - f2 f2 - f2 f2 - f2 f2 - f2 f2 f2@2] [g2 g2 - g2 g2 - g2 g2 - e2 e2 - e2 e2 e2@2]
+[a2 a2 - a2 a2 - a2 a2 - a2 a2 - a2 a2 a2@2] [f2 f2 - f2 f2 - f2 f2 - e2 e2 - e2 e2 e2@2] [c3 c3 - c3 c3 - c3 c3 - c3 c3 - c3 c3 c3@2] [d3 d3 - d3 d3 - d3 d3 - d3 d3 - d3 d3 d2@2]
+[d2 d2 - d2 d2 - d2 d2 - e2 e2 - e2 e2 e2@2] [f2 f2 - f2 f2 - f2 f2 - g2 g2 - g2 g2 g2@2] [a2 a2 - a2 a2 - a2 a2 - a2 a2 - a2@2 a2@2] [a2 a2 - a2 a2 - a2 a2 - a2 a2 - a2@2 a2@2]
+[a2 a2 - a2 a2 - a2 a2 - a2 a2 - a2@2 a2@2] [a2 a2 - a2 a2 - a2 a2 a2@4 a2@4]
+
+>`).sound("gm_overdriven_guitar").n(6).transpose("<0, 7, 12>").speed(1.0).legato(1.0).adsr("0.0:0.0:1.0:0.1").distort(0.25).pan(0.0).delay(0.2).room(0.4).hpf(100.0).lpf(20000.0).gain(0.4).postgain(1.0)
+
+// e guitar rhythm right
+$:note(`<
+
+[-]@16
+
+[-]@4
+[-]@4
+
+[g2] [eb2]
+[c2] [d2]
+[g2] [eb2]
+[c2] [d2]
+[g2] [g2]
+[eb2] [d2]
+[g2] [g2]
+[eb2] [d2]
+
+[g2 g2] [f2 f2] [eb2 eb2] [d2 d2]
+[g2 g2] [f2 f2] [eb2 eb2] [f2 d2]
+[e2 e2] [a2 a2] [g2 g2] [b2 b2]
+[e2 e2] [a2 a2] [g2 b2] [b2]
+[g2 g2] [f2 f2] [eb2 eb2] [d2 d2]
+[g2 g2] [f2 f2] [eb2 eb2] [f2 d2]
+[e2 e2] [a2 a2] [g2 g2] [b2 b2]
+[g2 g2] [a2 a2] [c3 c3] [b2 b2] [b2 b2]
+
+[g#2 g#2] [e2 d#2] [b2 b2] [c#3 c#3]
+[c#2 c#2] [d#2 d#2] [e2 e2] [f#2 d#2]
+[g#2 g#2] [e2 d#2] [b2 b2] [c#3 c#3]
+[c#2 d#2] [e2 f#2] [g#2] [g#2]
+[a2 a2] [f2 e2] [c2 c2] [d3 d3]
+[d2 d2] [e2 e2] [f2 f2] [g2 e2]
+[a2 a2] [f2 e2] [c2 c2] [d3 d3]
+[d2 e2] [f2 g2] [a2] [a2]
+[a2] [a2]
+
+>`).sound("gm_overdriven_guitar").n(6).transpose("<0, 7, 12>").speed(1.0).legato(1.0).adsr("0.0:0.0:1.0:0.1").distort(0.25).pan(1.0).delay(0.2).room(0.4).hpf(100.0).lpf(20000.0).gain(0.4).postgain(1.0)
+
+// bass
+$:note(`<
+
+[-]@16
+
+[g2@3 g2@3 g2@2 - g2@2 f2 f2 g2 g2 g2]!4
+[g2@3 g2@3 g2@2 - g2@2 f2 f2 g2 g2 g2]!3 [g2@3 g2@3 g2@2 f2 g2@2 f2 g2 -@3]
+
+[g2 g2 - g2 g2 - g2 g2 - g2 g2 - g2@2 g2@2] [eb2 eb2 - eb2 eb2 - eb2 eb2 - eb2 eb2 - eb2@2 eb2@2]
+[c2 c2 - c2 c2 - c2 c2 - c2 c2 - c2@2 c2@2] [d2 d2 - d2 d2 - d2 d2 - d2 d2 - d2@2 d2@2]
+[g2 g2 - g2 g2 - g2 g2 - g2 g2 - g2@2 g2@2] [eb2 eb2 - eb2 eb2 - eb2 eb2 - eb2 eb2 - eb2@2 eb2@2]
+[c2 c2 - c2 c2 - c2 c2 - c2 c2 - c2@2 c2@2] [d2 d2 - d2 d2 - d2 d2 - d2 d2 - d2@2 d2@2]
+[g2 g2 - g2 g2 - g2 g2 - g2 g2 - g2@2 g2@2] [f2 f2 - f2 f2 - f2 f2 - f2 f2 - f2@2 f2@2]
+[eb2 eb2 - eb2 eb2 - eb2 eb2 - eb2 eb2 - eb2@2 eb2@2] [d2 d2 - d2 d2 - d2 d2 - d2 d2 - d2@2 d2@2]
+[g2 g2 - g2 g2 - g2 g2 - g2 g2 - g2@2 g2@2] [f2 f2 - f2 f2 - f2 f2 - f2 f2 - f2@2 f2@2]
+[eb2 eb2 - eb2 eb2 - eb2 eb2 - eb2 eb2 - eb2@2 eb2@2] [d2 d2 - d2 d2 - d2 d2 - d2 d2 - d2@2 d2@2]
+
+[g2 g2 - g2 g2 - g2 g2 - g2 g2 - g2 g2 g2@2] [f2 f2 - f2 f2 - f2 f2 - f2 f2 - f2 f2 f2@2] [eb2 eb2 - eb2 eb2 - eb2 eb2 - eb2 eb2 - eb2 eb2 eb2@2] [d2 d2 - d2 d2 - d2 d2 - d2 d2 - d2 d2 d2@2]
+[g2 g2 - g2 g2 - g2 g2 - g2 g2 - g2 g2 g2@2] [f2 f2 - f2 f2 - f2 f2 - f2 f2 - f2 f2 f2@2] [eb2 eb2 - eb2 eb2 - eb2 eb2 - eb2 eb2 - eb2 eb2 eb2@2] [f2 f2 - f2 f2 - f2 f2 - d2 d2 - d2 d2 d2@2]
+[e2 e2 - e2 e2 - e2 e2 - e2 e2 - e2 e2 e2@2] [c#2 c#2 - c#2 c#2 - c#2 c#2 - c#2 c#2 - c#2 c#2 c#2@2] [d2 d2 - d2 d2 - d2 d2 - d2 d2 - d2 d2 d2@2] [d#2 d#2 - d#2 d#2 - d#2 d#2 - d#2 d#2 - d#2 d#2 d#2@2]
+[e2 e2 - e2 e2 - e2 e2 - e2 e2 - e2 e2 e2@2] [c#2 c#2 - c#2 c#2 - c#2 c#2 - c#2 c#2 - c#2 c#2 c#2@2] [d2 d2 - d2 d2 - d2 d2 - d2 d2 - d2 d2 d2@2] [b2 b2 - b2 b2 - b2 b2 - b2 b2 - b1 b1 b1 b1]
+[g2 g2 - g2 g2 - g2 g2 - g2 g2 - g2 g2 g2@2] [f2 f2 - f2 f2 - f2 f2 - f2 f2 - f2 f2 f2@2] [eb2 eb2 - eb2 eb2 - eb2 eb2 - eb2 eb2 - eb2 eb2 eb2@2] [d2 d2 - d2 d2 - d2 d2 - d2 d2 - d2 d2 d2@2]
+[g2 g2 - g2 g2 - g2 g2 - g2 g2 - g2 g2 g2@2] [f2 f2 - f2 f2 - f2 f2 - f2 f2 - f2 f2 f2@2] [eb2 eb2 - eb2 eb2 - eb2 eb2 - eb2 eb2 - eb2 eb2 eb2@2] [f2 f2 - f2 f2 - f2 f2 - d2 d2 - d2 d2 d2@2]
+[e2 e2 - e2 e2 - e2 e2 - e2 e2 - e2 e2 e2@2] [c#2 c#2 - c#2 c#2 - c#2 c#2 - c#2 c#2 - c#2 c#2 c#2@2] [d2 d2 - d2 d2 - d2 d2 - d2 d2 - d2 d2 d2@2] [d#2 d#2 - d#2 d#2 - d#2 d#2 - d#2 d#2 - d#2 d#2 d#2@2]
+[d2 d2 - d2 d2 - d2 d2 - d2 d2 - d2 d2 d2@2] [c#2 c#2 - c#2 c#2 - c#2 c#2 - c#2 c#2 - c#2 c#2 c#2@2] [c2 c2 - c2 c2 - c2 c2 - c2 c2 - c2 c2 c2@2] [b2 b2 - b2 b2 - b2 b2 - b2 b2 - b2 b2 b2 b2] [b1]
+
+[g#2 g#2 - g#2 g#2 - g#2 g#2 - g#2 g#2 - g#2@2 g#2@2] [f##2 f##2 - f##2 f##2 - f##2 f##2 - f##2 f##2 - f##2@2 f##2@2] [f#2 f#2 - f#2 f#2 - f#2 f#2 - f#2 f#2 - f#2@2 f#2@2] [e#2 e#2 - e#2 e#2 - e#2 e#2 - e#2 e#2 - e#2@2 e#2@2]
+[c#2 c#2 - c#2 c#2 - c#2 c#2 - c#2 c#2 - c#2@2 c#2@2] [d#2 d#2 - d#2 d#2 - d#2 d#2 - d#2 d#2 - d#2@2 d#2@2] [e2 e2 - e2 e2 - e2 e2 - e2 e2 - e2@2 e2@2] [f#2 f#2 - f#2 f#2 - f#2 f#2 - f##2 f##2 - f##2@2 f##2@2]
+[g#2 g#2 - g#2 g#2 - g#2 g#2 - g#2 g#2 - g#2@2 g#2@2] [f##2 f##2 - f##2 f##2 - f##2 f##2 - f##2 f##2 - f##2@2 f##2@2] [f#2 f#2 - f#2 f#2 - f#2 f#2 - f#2 f#2 - f#2@2 f#2@2] [e#2 e#2 - e#2 e#2 - e#2 e#2 - e#2 e#2 - e#2@2 e#2@2]
+[c#2 c#2 - c#2 c#2 - c#2 c#2 - d#2 d#2 - d#2@2 d#2@2] [e2 e2 - e2 e2 - e2 e2 - f#2 f#2 - f#2@2 f#2@2] [g#2 g#2 - g#2 g#2 - g#2 g#2 - g#2 g#2 - g#2@2 g#2@2] [g#2 g#2 - g#2 g#2 - g#2 g#2 - g#2 g#2 - g#2@2 g#2 g#2]
+[a2 a2 - a2 a2 - a2 a2 - a2 a2 - a2@2 a2@2] [g#2 g#2 - g#2 g#2 - g#2 g#2 - g#2 g#2 - g#2@2 g#2@2] [g2 g2 - g2 g2 - g2 g2 - g2 g2 - g2@2 g2@2] [f#2 f#2 - f#2 f#2 - f#2 f#2 - f#2 f#2 - f#2@2 f#2@2]
+[d2 d2 - d2 d2 - d2 d2 - d2 d2 - d2@2 d2@2] [e2 e2 - e2 e2 - e2 e2 - e2 e2 - e2@2 e2@2] [f2 f2 - f2 f2 - f2 f2 - f2 f2 - f2@2 f2@2] [g2 g2 - g2 g2 - g2 g2 - g#2 g#2 - g#2@2 g#2@2]
+[a2 a2 - a2 a2 - a2 a2 - a2 a2 - a2@2 a2@2] [g#2 g#2 - g#2 g#2 - g#2 g#2 - g#2 g#2 - g#2@2 g#2@2] [g2 g2 - g2 g2 - g2 g2 - g2 g2 - g2@2 g2@2] [f#2 f#2 - f#2 f#2 - f#2 f#2 - f#2 f#2 - f#2@2 f#2@2]
+[d2 d2 - d2 d2 - d2 d2 - e2 e2 - e2@2 e2@2] [f2 f2 - f2 f2 - f2 f2 - g2 g2 - g2@2 g2@2] [a2 a2 - a2 a2 - a2 a2 - a2 a2 - a2@2 a2@2] [a2 a2 - a2 a2 - a2 a2 - a2 a2 - a2@2 a2 a2]
+[a2 a2 - a2 a2 - a2 a2 - a2 a2 - a2@2 a2@2] [a2 a2 - a2 a2 - a2 a2 a2@4 a2@2 a2 a2]
+
+>`).sound("gm_electric_bass_pick").n(5).transpose(-12).speed(1.0).legato(1.0).adsr("0.0:0.0:1.0:0.1").transient(0.2).distort(0.25).pan(0.5).delay(0.0).room(0.4).hpf(0.0).lpf(20000.0).gain(0.8).postgain(1.0)
+
+// reverse cymbal
+$:note(`<
+
+[-]@8
+[-]@7 [c4]
+
+[-]@7 [c4]
+
+[-]@7 [c4]
+[-]@7 [c4]
+
+[-]@15 [c4]
+[-]@16 [c4]
+
+[-]@15 [c4]
+[-]@16
+[-] [c4]
+
+>`).sound("gm_reverse_cymbal").n(1).transpose(0).speed(1.0).legato(1.0).adsr("0.0:0.0:1.0:1.0").pan(0.5).delay(0.4).room(0.4).hpf(0.0).lpf(20000.0).gain(0.8).postgain(1.0)
+
+// impact
+$:sound(`<
+
+[bd] [-]@3
+[bd] [-]@3
+
+[bd] [-]@3
+[bd] [-]
+[-] [bd]
+
+[bd] [-]@3
+[bd] [-]@3
+
+[bd] [-]@3
+[bd] [-]@3
+[bd] [-]@3
+[bd] [-]@3
+
+[bd] [-]@7
+[bd] [-]@7
+[bd] [-]@7
+[bd] [-]@7 [bd]
+
+[bd] [-]@7
+[bd] [-]@7
+[bd] [-]@7
+[bd] [-]@5 [bd] [-]
+[bd] [-]
+
+>`).bank("yamaharm50").n(17).speed(1.0).legato(1.0).adsr("0.0:0.0:1.0:0.1").transient(0.1).distort(2.0).compressor("-20.0:4.0:2.0:0.2:0.2").pan(0.5).delay(0.0).room(1.0).hpf(0.0).lpf(1200.0).gain(0.06).postgain(1.0)
 
 // kick
 $:sound(`<
 
-  [bd [-@3 bd] [-@2 bd -] -] * 15@15 [[bd -@2 bd -@2 bd -] [bd -@2 bd -@2 - [bd bd]]]
-  [bd [-@3 bd] [-@2 bd -] -] * 15@15 [[bd -@2 bd -@2 bd -] [bd -@2 bd -@2 - [bd bd]]]
+[-]@16
 
-  [[bd -@2 bd -@2 bd -] [bd -@2 bd -@2 bd -]] [[bd -@2 bd -@2 bd -] [bd -@2 bd -@2 bd [bd bd]]]
+[-]@8
 
->`).bank("yamaharm50").n(17).speed(1.0).clip(1.0).adsr("0.0:0.5:0.0:0.0").transient(0.1).distort(2.0).compressor("-10.0:4.0:10:1:1").pan(0.5).room(0.2).gain(0.15).postgain(1.0)
+[bd - - bd -@3 bd - - bd - -@4]!8
+[bd - - bd -@3 bd - - bd - -@4]!7 [bd - bd bd - bd - bd - - bd - bd bd - bd]
+
+[bd - - bd -@3 bd - - bd - -@4]!7 [bd - - bd -@3 bd -@2 bd - -@4]
+[bd - - bd -@3 bd - - bd - -@4]!7 [bd - - bd - - bd bd - - bd - bd bd -@2]
+[bd - - bd -@3 bd - - bd - -@4]!7 [bd - - bd -@3 bd -@2 bd - -@2 bd bd]
+[bd - - bd -@3 bd - - bd - -@4]!7 [bd - bd bd -@2 bd bd -@2 bd bd -@2 bd -] [bd]
+
+[bd - - bd -@3 bd - - bd - -@4]!3 [bd bd - bd -@2 bd bd - - bd - -@4] [bd - - bd -@3 bd - - bd - -@4]!3 [bd bd - bd -@2 bd bd - - bd - -@4]
+[bd - - bd -@3 bd - - bd - -@4]!3 [bd bd - bd -@2 bd bd - - bd - -@4] [bd - - bd -@3 bd -@2 bd - -@4] [bd bd - bd -@3 bd -@2 bd - -@2 bd bd ] [bd bd - bd -@3 bd -@2 bd - -@4] [bd bd - bd -@2 bd bd -@2 bd - bd - bd bd]
+[bd - - bd -@3 bd - - bd - -@4]!3 [bd bd - bd -@2 bd bd - - bd - -@4] [bd - - bd -@3 bd - - bd - -@4]!3 [bd bd - bd -@2 bd bd - - bd - -@4]
+[bd - - bd -@3 bd - - bd - -@4]!3 [bd bd - bd -@2 bd bd - - bd - -@4] [bd bd - bd -@2 bd bd -@2 bd - -@4] [bd bd - bd -@3 bd -@2 bd - -@4] [bd bd - bd -@2 bd bd -@2 bd - -@4] [bd bd - bd -@2 bd bd -@2 bd - -@4]
+[bd -@3 -@3 bd -@2 bd - -@4] [bd -@2 bd bd -@2 bd bd -@2 bd bd - bd -]
+
+>`).bank("yamaharm50").n(17).speed(1.0).legato(1.0).adsr("0.0:0.0:1.0:0.1").transient(0.2).distort(2.0).compressor("-20.0:4.0:2.0:0.2:0.2").pan(0.5).delay(0.0).room(0.4).hpf(0.0).lpf(20000.0).gain(0.04).postgain(1.0)
 
 // snare
 $:sound(`<
 
-  [[- sd - sd] [- sd - [sd sd - sd]] [- sd - sd] [- sd - [sd sd - sd]]] * 3@12
-  [- sd - sd] [- sd - [sd sd - sd]] [- sd - sd] [[-@7 sd] [-@6 sd -]]
+[-]@16
 
-  [[- sd - sd] [- sd - [sd sd - sd]] [- sd - sd] [- sd - [sd sd - sd]]] * 3@12
-  [- sd - sd] [- sd - [sd sd - sd]] [- sd - sd] [[-@7 sd] [-@6 sd sd]]
+[-]@8
 
-  [- sd - sd] [[-@6 sd sd] [-@6 sd [sd sd]]]
+[-@4 sd -@3 -@4 sd -@3]!8
+[-@4 sd -@3 -@4 sd -@3]!7 [- - - sd - sd - sd sd - - sd - sd - sd]
 
->`).bank("yamaharm50").n(85).speed(0.7).clip(1.0).adsr("0.0:0.4:0.0:0.0").transient(0.1).distort(1.0).compressor("-10.0:4.0:10:1:1").pan(0.5).room(0.2).gain(0.15).postgain(1.0)
+[-@4 sd -@3 -@4 sd -@3]!7 [-@4 sd -@3 - sd -@2 sd -@3]
+[-@4 sd -@3 -@4 sd -@3]!7 [- sd - - sd -@3 -@4 -@2 sd -]
+[-@4 sd -@3 -@4 sd -@3]!7 [- sd -@2 sd -@3 -@8]
+[-@4 sd -@3 -@4 sd -@3]!7 [-@4 sd -@3 sd -@3 sd -@3] [-]
+
+[-@4 sd -@3 -@4 sd -@3]!3 [-@4 sd -@3 -@4 sd -@3] [-@4 sd -@3 -@4 sd -@3]!3 [-@4 sd -@3 -@4 sd -@3]
+[-@4 sd -@3 -@4 sd -@3]!3 [-@4 sd -@3 -@4 sd -@3] [-@4 sd -@4 sd -@2 sd -@3] [-@4 sd - sd - - sd -@2 sd -@3] [-@4 sd - sd - - sd -@2 sd -@3] [-@4 sd -@3 -@4 -@2 sd -]
+[-@4 sd -@3 -@4 sd -@3]!3 [-@4 sd -@3 -@4 sd -@3] [-@4 sd -@3 -@4 sd -@3]!3 [-@4 sd -@3 -@4 sd -@3]
+[-@4 sd -@3 -@4 sd -@3]!3 [-@4 sd -@3 -@4 sd -@3] [-@4 sd -@3 - sd -@2 sd -@3] [-@4 sd - sd - -@4 sd -@2 sd] [-@4 sd -@3 - sd -@2 sd -@3] [-@4 sd -@3 - sd -@2 sd -@3]
+[-@4 sd -@3 - sd -@2 sd -@3] [-@2 sd - -@2 sd - -@2 sd - - sd -@2]
+
+>`).bank("yamaharm50").n(85).speed(0.9).legato(1.0).adsr("0.0:0.0:1.0:0.1").transient(0.1).distort(2.0).compressor("-20.0:4.0:2.0:0.2:0.2").pan(0.5).delay(0.0).room(0.4).hpf(200.0).lpf(20000.0).gain(0.022).postgain(1.0)
 
 // toms
 $:sound(`<
 
-  [-]@15
-  [[- ht mt - mt lt -@2 ] [- [ht mt] lt - mt lt -@2]]
+[-]@16
 
-  [-]@15
-  [[- ht mt - mt lt -@2 ] [- [ht mt] lt - mt lt -@2]]
+[-]@8
 
-  [-] [[- ht mt - mt lt -@2] [- ht mt - mt lt -@2]]
+[-]@8
+[-]@7 [-@8 - ht ht - mt - - lt]
 
->`).bank("yamaharm50").n(1).speed(1.0).clip(2.0).transient(0.15).distort(1.0).compressor("-10.0:4.0:10:1:1").pan(0.5).room(0.2).gain(0.1).postgain(1.0)
+[-]@15 [-@4 -@2 ht mt -@4 lt mt -@2]
+[-]@7 [- mt - lt mt - ht mt - - lt - ht mt mt lt]
+[-]@7 [-@2 ht mt -@2 ht mt -@2 ht mt ht mt lt -] [lt]
+
+[-]@8
+[-]@4 [-]@3 [-@4 -@2 ht mt - mt lt - mt lt -@2]
+[-]@8
+[-]@8
+[-] [-@4 -@4 -@4 ht mt lt -]
+  
+>`).bank("yamaharm50").n(1).speed(1.0).legato(2.0).adsr("0.0:0.0:1.0:0.1").transient(0.1).distort(1.0).compressor("-20.0:4.0:2.0:0.2:0.2").pan(0.5).delay(0.0).room(0.4).hpf(0.0).lpf(20000.0).gain(0.06).postgain(1.0)
 
 // crash
 $:sound(`<
 
-  [cr -@14 [- cr]] * 4@32
+[-]@16
 
-  [cr -] [- cr]
-  
->`).bank("yamaharm50").n(5).speed("<0.96 1.04>").clip(1.0).distort(0.0).pan("<0.35 0.65>").delay("0.2:0.4:0.4").room(0.4).gain(0.4).postgain(1.0)
+[-]@8
+
+[cr] [-]@3
+[cr] [-]@3 
+[cr] [-]@3
+[cr] [-]@2 [-@6 cr@2 -@2 cr@4 -@2]
+
+[cr] [-]@6 [-@3 cr]
+[cr] [-]@3 [cr] [-]@2 [-@3 cr]
+[cr] [-]@6 [-@3 cr]
+[cr] [-]@3 [cr] [-]@2 [-@3 cr] [cr]
+
+[cr] [-]@7
+[cr] [-]@3 [cr] [-] [cr] [cr]
+[cr] [-]@7
+[cr] [-]@3 [cr] [cr] [cr] [cr]
+[cr] [cr cr]
+
+>`).bank("yamaharm50").n(5).speed(1.2).legato(1.2).adsr("0.0:0.0:1.0:1.0").transient(0.1).distort(0.0).compressor("-20.0:4.0:2.0:0.2:0.2").pan(0.8).delay(0.4).room(0.4).hpf(0.0).lpf(20000.0).gain(0.12).postgain(1.0)
 
 // ride
 $:sound(`<
 
-  [[- rd] [- rd]] * 64@32
+[-]@16
 
-  [- rd - [rd rd]] [- rd rd [- rd]]
-  
->`).bank("yamaharm50").n(3).speed(1.2).clip(1.0).transient(0.1).distort(0.0).pan(0.8).delay("0.1:0.1:0.2").room(0.4).gain("<0.4 0.3> * 4").postgain(1.0)
+[-]@8
 
-// close hats
+[-]@8
+[-]@8
+
+[-]@8
+[- rd - rd - rd - rd] [- rd - rd - rd rd rd] [- rd - rd - rd - rd] [- rd - rd - rd rd rd]
+[- rd - rd - rd - rd] [- rd - rd - rd rd rd] [- rd - rd - rd - rd] [- rd - rd -@4]
+[-]@8
+[- rd - rd - rd - rd] [- rd - rd - rd rd rd] [- rd - rd - rd - rd] [- rd - rd - rd rd rd]
+[- rd - rd - rd - rd] [- rd - rd - rd rd rd] [- rd - rd - rd - rd] [rd -@7] [-]
+
+[- rd - rd - rd - rd] [- rd - rd - rd rd rd] [- rd - rd - rd - rd] [- rd - rd - rd rd rd] [- rd - rd - rd - rd] [- rd - rd - rd rd rd] [- rd - rd - rd - rd] [- rd - rd - rd rd rd]
+[- rd - rd - rd - rd] [- rd - rd - rd rd rd] [- rd - rd - rd - rd] [- rd - rd - rd rd rd] [- rd - rd - rd - rd] [- rd - rd - rd rd rd] [- rd - rd - rd - rd] [-]
+[- rd - rd - rd - rd] [- rd - rd - rd rd rd] [- rd - rd - rd - rd] [- rd - rd - rd rd rd] [- rd - rd - rd - rd] [- rd - rd - rd rd rd] [- rd - rd - rd - rd] [- rd - rd - rd rd rd]
+[- rd - rd - rd - rd] [- rd - rd - rd rd rd] [- rd - rd - rd - rd] [- rd - rd - rd rd rd] [- rd - rd - rd - rd] [- rd - rd - rd rd rd] [- rd - rd - rd - rd] [- rd - rd - rd rd rd] 
+[- rd - rd - rd - rd] [-]
+
+>`).bank("yamaharm50").n(3).speed(1.2).legato(1.0).adsr("0.0:0.0:1.0:0.1").transient(0.1).distort(0.0).compressor("-20.0:4.0:2.0:0.2:0.2").pan(0.8).delay(0.2).room(0.4).hpf(0.0).lpf(20000.0).gain(0.12).postgain(1.0)
+
+// close hat
 $:sound(`<
 
-  [[[hh -]!2] [[hh -]!2] [[hh -]!2] [[hh -]!2]]!15 [-]@1
-  
-  [-]@16
+[-]@16
 
-  [-]@2
+[-]@8
 
->`).bank("yamaharm50").n(7).speed("<1.04 0.96> * 8").clip(1.0).transient(0.0).distort(0.0).pan(0.2).delay("0.1:0.1:0.2").room(0.4).gain("<0.2 0.14> * 8").postgain(1.0)
+[- hh hh hh hh hh -@2]!8
+[- hh - hh hh -@3]!8
 
-// open hats
+[- hh hh hh - hh -@2] [- hh - hh - hh - hh] [- hh hh hh - hh -@2] [- hh - hh [hh hh] - - hh]
+[- hh hh hh - hh -@2] [- hh - hh - hh - hh] [- hh hh hh - hh -@2] [- hh - hh [hh hh] - - hh]
+[-]@8
+[- hh hh hh - hh -@2] [- hh - hh - hh - hh] [- hh hh hh - hh -@2] [- hh - hh [hh hh] - - hh]
+[- hh hh hh - hh -@2] [- hh - hh - hh - hh] [- hh hh hh - hh -@2] [- hh - hh [hh hh] - - hh]
+[-]@7 [hh hh - - hh@2 -@2 -@2 hh@2 -@4] [-]
+
+[-]@16
+[-]@16
+[-]@2
+
+>`).bank("yamaharm50").n(7).speed(1.0).legato(1.0).adsr("0.0:0.0:1.0:0.1").transient(0.1).distort(0.0).compressor("-20.0:4.0:2.0:0.2:0.2").pan(0.2).delay(0.2).room(0.4).hpf(0.0).lpf(20000.0).gain(0.06).postgain(1.0)
+
+// open hat
 $:sound(`<
 
-  [-]@16
-  
-  [oh!4]!15 [oh -@3]
+[-]@16
 
-  [oh!4] [oh -@3]
-  
->`).bank("yamaharm50").n(16).speed("<1.0 0.994>").clip(1.2).transient(0.0).distort(0.0).pan(0.2).delay("0.1:0.1:0.2").room(0.4).gain("<0.16 0.14> * 4").postgain(1.0)
+[[oh - - oh - - oh - - oh - oh oh - - -] [oh - - oh - - oh - - oh - oh - oh - oh]]@2
+[[oh - - oh - - oh - - oh - oh oh - - -] [oh - - oh - - oh - - oh - oh oh oh - oh]]@2
+[[oh - - oh - - oh - - oh - oh oh - - -] [oh - - oh - - oh - - oh - oh - oh - oh]]@2
+[[oh - - oh - - oh - - oh - oh oh - - -] [oh - - oh - - oh - - oh - oh oh - -@2]]@2
+
+[-@7 oh]!8
+[-@4 - oh - oh]!8
+
+[-@4 oh - - oh] [-@2 oh - oh - -@2] [-@4 oh - - oh] [-@2 oh - - oh -@2]
+[-@4 oh - - oh] [-@2 oh - oh - -@2] [-@4 oh - - oh] [-@2 oh - - oh -@2]
+[-]@8
+[-@4 oh - - oh] [-@2 oh - oh - -@2] [-@4 oh - - oh] [-@2 oh - - oh -@2]
+[-@4 oh - - oh] [-@2 oh - oh - -@2] [-@4 oh - - oh] [-@2 oh - - oh -@2]
+[-]@7 [-@2 oh - -@2 oh@2 oh@2 - oh@3 oh@2] [-]
+
+[oh -@3 -@4]!16
+[oh -@3 -@4]!16
+[oh -@3 -@4]!2
+
+>`).bank("yamaharm50").n(16).speed(1.0).legato(1.0).adsr("0.0:0.0:1.0:0.1").transient(0.1).distort(0.0).compressor("-20.0:4.0:2.0:0.2:0.2").pan(0.2).delay(0.2).room(0.4).hpf(0.0).lpf(20000.0).gain(0.06).postgain(1.0)
