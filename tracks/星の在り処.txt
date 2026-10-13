@@ -1,6 +1,9 @@
-// 英雄伝説 空の軌跡 オリジナルサウンドトラック // 星の在り処 // Copyright © Nihon Falcom Corporation
+// @title 星の在り処
+// original @by Falcom Sound Team jdk <https://www.falcom.co.jp/>
+// arranged @by ntyn <https://ntyn.net>
 
-// Code and arrangement by ntyn (ntyn.net)
+/* @details
+*/
 
 setcpm(142/4)
 
